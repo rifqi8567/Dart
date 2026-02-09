@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Modul Pembelajaran Dart - List, Set, Map, Symbol, If-Else, Switch Case, Break & Continue"
+    />
+    <title>Modul Dart - Bab 5</title>
+    <link rel="icon" type="image/png" href="Dart1.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Prism.js for syntax highlighting -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+  </head>
+  <body>
+    <!-- Floating Dart Icons -->
+    <div class="floating-icons">
+      <img src="Dart1.png" alt="Dart" class="float-icon icon-1" />
+      <img src="Dart1.png" alt="Dart" class="float-icon icon-2" />
+      <img src="Dart1.png" alt="Dart" class="float-icon icon-3" />
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landing" class="landing-container">
+      <header class="landing-header">
+        <img src="Dart1.png" alt="Dart Logo" class="main-logo" />
+        <h1>Modul Dart</h1>
+        <p class="subtitle">
+          List, Set, Map, Symbol, If-Else, Switch Case, Break & Continue
+        </p>
+      </header>
+
+      <div class="topics-grid">
+        <div class="topic-card" onclick="showTopic('list')">
+          <div class="card-icon">📋</div>
+          <h3>List</h3>
+          <p>Koleksi terurut dari item-item</p>
+        </div>
+        <div class="topic-card" onclick="showTopic('set')">
+          <div class="card-icon">🔢</div>
+          <h3>Set</h3>
+          <p>Koleksi item unik</p>
+        </div>
+        <div class="topic-card" onclick="showTopic('map')">
+          <div class="card-icon">🗺️</div>
+          <h3>Map</h3>
+          <p>Pasangan key-value</p>
+        </div>
+        <div class="topic-card" onclick="showTopic('symbol')">
+          <div class="card-icon">🔣</div>
+          <h3>Symbol</h3>
+          <p>Identifier unik</p>
+        </div>
+        <div class="topic-card" onclick="showTopic('ifelse')">
+          <div class="card-icon">🔀</div>
+          <h3>If-Else</h3>
+          <p>Struktur kontrol keputusan</p>
+        </div>
+        <div class="topic-card" onclick="showTopic('switch')">
+          <div class="card-icon">🎛️</div>
+          <h3>Switch Case</h3>
+          <p>Multiple kondisi untuk satu variabel</p>
+        </div>
+        <div class="topic-card" onclick="showTopic('breakContinue')">
+          <div class="card-icon">⏭️</div>
+          <h3>Break & Continue</h3>
+          <p>Kontrol alur loop</p>
+        </div>
+        <div
+          class="topic-card project-card"
+          onclick="showTopic('miniProjects')"
+        >
+          <div class="card-icon">💻</div>
+          <h3>Mini Projects</h3>
+          <p>4 project praktik kelas</p>
+        </div>
+        <div class="topic-card homework-card" onclick="showTopic('tugasRumah')">
+          <div class="card-icon">📝</div>
+          <h3>Tugas Rumah</h3>
+          <p>4 tugas lengkap dengan panduan</p>
+        </div>
+      </div>
+
+      <footer class="landing-footer">
+        <p>
+          Gunakan <kbd>←</kbd> <kbd>→</kbd> untuk navigasi |
+          <kbd>Esc</kbd> kembali ke menu
+        </p>
+      </footer>
+    </div>
+
+    <!-- Slide Container -->
+    <div id="slideContainer" class="slide-container hidden">
+      <div class="slide-header">
+        <button class="back-btn" onclick="showLanding()">
+          <span>←</span> Menu
+        </button>
+        <div class="topic-title" id="topicTitle">List</div>
+        <div class="progress-info">
+          <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+        </div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="slide-content" id="slideContent">
+        <!-- Slide content will be injected here -->
+      </div>
+
+      <div class="slide-navigation">
+        <button class="nav-btn prev-btn" onclick="prevSlide()" id="prevBtn">
+          <span>←</span> Sebelumnya
+        </button>
+        <button class="nav-btn next-btn" onclick="nextSlide()" id="nextBtn">
+          Selanjutnya <span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
+    <script src="slides-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

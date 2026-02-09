@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Dart - Presentasi Interaktif</title>
+    <link rel="icon" type="image/png" href="Dart1.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Landing Page -->
+    <section id="landing" class="landing-page active">
+      <div class="particles"></div>
+      <div class="floating-icons">
+          <img src="Dart1.png" class="deco-icon icon-1" alt="dart-deco">
+          <img src="Dart1.png" class="deco-icon icon-2" alt="dart-deco">
+          <img src="Dart1.png" class="deco-icon icon-3" alt="dart-deco">
+      </div>
+      <div class="landing-content">
+        <div class="logo-container">
+          <div class="dart-logo">
+            <img src="Dart1.png" alt="Dart Logo" class="main-logo-img" />
+            <div class="logo-glow"></div>
+            <div class="logo-ring"></div>
+            <div class="logo-ring ring-2"></div>
+          </div>
+          <h1 class="main-title">
+            OPERATOR DALAM<br /><span class="highlight">PEMROGRAMAN DART</span>
+          </h1>
+          <p class="subtitle">Bab 4 - Materi Pembelajaran Interaktif</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card" data-topic="aritmatika" style="--delay: 0.1s">
+            <div class="card-icon">➕</div>
+            <h3>3.1 Operator Aritmatika</h3>
+            <p>Operasi matematika: +, -, *, /, ~/, %, ++, --</p>
+            <div class="card-arrow">→</div>
+          </div>
+
+          <div
+            class="menu-card"
+            data-topic="perbandingan"
+            style="--delay: 0.2s"
+          >
+            <div class="card-icon">⚖️</div>
+            <h3>3.2 Operator Perbandingan</h3>
+            <p>Membandingkan nilai: ==, !=, >, <, >=, <=</p>
+            <div class="card-arrow">→</div>
+          </div>
+
+          <div class="menu-card" data-topic="penugasan" style="--delay: 0.3s">
+            <div class="card-icon">📝</div>
+            <h3>3.3 Operator Penugasan</h3>
+            <p>Assignment: =, +=, -=, *=, /=, ??=</p>
+            <div class="card-arrow">→</div>
+          </div>
+
+          <div class="menu-card" data-topic="logika" style="--delay: 0.4s">
+            <div class="card-icon">🧠</div>
+            <h3>3.4 Operator Logika</h3>
+            <p>Boolean logic: &&, ||, !</p>
+            <div class="card-arrow">→</div>
+          </div>
+
+          <div class="menu-card" data-topic="typetest" style="--delay: 0.5s">
+            <div class="card-icon">🔍</div>
+            <h3>3.5 Operator Type Test</h3>
+            <p>Type checking: is, is!, as</p>
+            <div class="card-arrow">→</div>
+          </div>
+
+          <div class="menu-card" data-topic="projects" style="--delay: 0.6s">
+            <div class="card-icon">📚</div>
+            <h3>Mini Projects</h3>
+            <p>Praktik langsung dengan 4 project menarik</p>
+            <div class="card-arrow">→</div>
+          </div>
+
+          <div class="menu-card" data-topic="tugas" style="--delay: 0.7s">
+            <div class="card-icon">🏠</div>
+            <h3>Tugas Rumah</h3>
+            <p>4 tugas praktik untuk dikerjakan mandiri</p>
+            <div class="card-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="footer-info">
+          <p>Klik salah satu topik untuk memulai pembelajaran</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Presentation Container -->
+    <section id="presentation" class="presentation-container">
+      <div class="presentation-bg">
+          <img src="Dart1.png" class="deco-icon mini-icon-1" alt="dart-deco">
+          <img src="Dart1.png" class="deco-icon mini-icon-2" alt="dart-deco">
+      </div>
+      <nav class="presentation-nav">
+        <button class="nav-btn home-btn" onclick="goToLanding()">
+          <span>🏠</span> Menu Utama
+        </button>
+        <div class="slide-info">
+          <span id="currentTopic">-</span>
+          <span class="slide-counter"
+            >Slide <span id="currentSlide">1</span> /
+            <span id="totalSlides">1</span></span
+          >
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn" onclick="prevSlide()">← Sebelumnya</button>
+          <button class="nav-btn" onclick="nextSlide()">Selanjutnya →</button>
+        </div>
+      </nav>
+
+      <div class="slides-wrapper" id="slidesWrapper">
+        <!-- Slides will be injected here -->
+      </div>
+
+      <div class="slide-progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </section>
+
+    <script src="slides-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

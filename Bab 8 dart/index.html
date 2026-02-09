@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Presentasi Dart - Higher Order Function, Anonymous Function, dan Scope"
+    />
+    <title>Dart - Higher Order Function, Anonymous Function & Scope</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Dart1.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+
+    <!-- Floating Dart Logos (Decoration) -->
+    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
+    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
+    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
+    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
+
+    <!-- ==================== LANDING PAGE ==================== -->
+    <main class="landing-page">
+      <header class="header">
+        <img src="Dart1.png" alt="Dart Logo" class="header-logo" />
+        <h1>Dart Programming</h1>
+        <p>Modul: Higher Order Function, Anonymous Function & Scope</p>
+        <span class="module-badge">Bab 8</span>
+      </header>
+
+      <section class="topics-grid">
+        <!-- Topic 1: Higher Order Function -->
+        <article class="topic-card" data-topic="higherOrderFunction">
+          <span class="icon">🚀</span>
+          <h2>Higher Order Function</h2>
+          <p>
+            Fungsi yang dapat menerima fungsi lain sebagai parameter atau
+            mengembalikan fungsi sebagai hasil
+          </p>
+          <span class="slide-count">6 slides</span>
+        </article>
+
+        <!-- Topic 2: Anonymous Function -->
+        <article class="topic-card" data-topic="anonymousFunction">
+          <span class="icon">🎭</span>
+          <h2>Anonymous Function</h2>
+          <p>
+            Fungsi tanpa nama (lambda/closure) yang sangat berguna untuk operasi
+            sekali pakai
+          </p>
+          <span class="slide-count">5 slides</span>
+        </article>
+
+        <!-- Topic 3: Scope -->
+        <article class="topic-card" data-topic="scope">
+          <span class="icon">🔭</span>
+          <h2>Scope</h2>
+          <p>
+            Memahami cakupan variabel: Global, Local, dan Block scope dalam Dart
+          </p>
+          <span class="slide-count">6 slides</span>
+        </article>
+
+        <!-- Topic 4: Tugas Rumah -->
+        <article class="topic-card" data-topic="tugasRumah">
+          <span class="icon">📝</span>
+          <h2>Tugas Rumah</h2>
+          <p>
+            4 Project untuk latihan mandiri: Sistem Penilaian, Todo List, String
+            Validator, dan Data Pipeline
+          </p>
+          <span class="slide-count">4 slides</span>
+        </article>
+
+        <!-- Topic 5: Kesimpulan -->
+        <article class="topic-card" data-topic="kesimpulan">
+          <span class="icon">📌</span>
+          <h2>Kesimpulan</h2>
+          <p>
+            Ringkasan materi Higher Order Function, Anonymous Function, dan
+            Scope
+          </p>
+          <span class="slide-count">1 slide</span>
+        </article>
+      </section>
+    </main>
+
+    <!-- ==================== SLIDE VIEWER ==================== -->
+    <div class="slide-viewer">
+      <!-- Slide Header -->
+      <header class="slide-header">
+        <button class="back-btn">
+          <span>←</span>
+          <span>Kembali</span>
+        </button>
+
+        <div class="topic-title">
+          <img src="Dart1.png" alt="Dart" />
+          <h2>Higher Order Function</h2>
+        </div>
+
+        <div class="progress-info">
+          <span class="slide-counter">1 / 6</span>
+          <div class="progress-bar">
+            <div class="fill" style="width: 16.66%"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Slide Content -->
+      <section class="slide-content-area">
+        <div class="slide-content">
+          <!-- Content will be injected by JavaScript -->
+        </div>
+      </section>
+
+      <!-- Slide Navigation -->
+      <nav class="slide-navigation">
+        <button class="nav-btn prev" disabled>← Sebelumnya</button>
+        <button class="nav-btn next">Selanjutnya →</button>
+      </nav>
+
+      <!-- Keyboard Hint -->
+      <div class="keyboard-hint">
+        <kbd>←</kbd> <kbd>→</kbd> untuk navigasi &nbsp;|&nbsp;
+        <kbd>Esc</kbd> untuk kembali
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="slides-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

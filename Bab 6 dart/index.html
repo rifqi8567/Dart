@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart Programming - Bab 6</title>
+    <link rel="icon" type="image/png" href="Dart1.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Dart Icons Background -->
+    <div class="floating-icons">
+        <img src="Dart1.png" alt="Dart" class="float-icon icon-1">
+        <img src="Dart1.png" alt="Dart" class="float-icon icon-2">
+        <img src="Dart1.png" alt="Dart" class="float-icon icon-3">
+        <img src="Dart1.png" alt="Dart" class="float-icon icon-4">
+        <img src="Dart1.png" alt="Dart" class="float-icon icon-5">
+        <img src="Dart1.png" alt="Dart" class="float-icon icon-6">
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landing" class="landing-container">
+        <header class="hero">
+            <div class="hero-icon">
+                <img src="Dart1.png" alt="Dart Logo" class="dart-logo">
+            </div>
+            <h1 class="hero-title">DART PROGRAMMING</h1>
+            <p class="hero-subtitle">Bab 6: Null, Operators & Loops</p>
+            <div class="hero-line"></div>
+        </header>
+
+        <main class="topics-grid">
+            <!-- Topic Cards -->
+            <div class="topic-card" onclick="openTopic('null')">
+                <div class="card-icon">🔲</div>
+                <h3>Null</h3>
+                <p>Nilai kosong dalam Dart</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card" onclick="openTopic('ternary')">
+                <div class="card-icon">❓</div>
+                <h3>Ternary Operator</h3>
+                <p>If-else dalam satu baris</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card" onclick="openTopic('nullsafety')">
+                <div class="card-icon">🛡️</div>
+                <h3>Null Safety</h3>
+                <p>Mencegah null errors</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card" onclick="openTopic('forloop')">
+                <div class="card-icon">🔁</div>
+                <h3>For Loop</h3>
+                <p>Perulangan dengan counter</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card" onclick="openTopic('whileloop')">
+                <div class="card-icon">🔄</div>
+                <h3>While Loop</h3>
+                <p>Perulangan dengan kondisi</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card" onclick="openTopic('dowhile')">
+                <div class="card-icon">🔃</div>
+                <h3>Do While Loop</h3>
+                <p>Minimal 1x eksekusi</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card" onclick="openTopic('forin')">
+                <div class="card-icon">📋</div>
+                <h3>For In Loop</h3>
+                <p>Iterasi collection</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <!-- Mini Projects -->
+            <div class="topic-card project-card" onclick="openTopic('projectkelas')">
+                <div class="card-icon">💻</div>
+                <h3>Mini Project Kelas</h3>
+                <p>4 Project latihan bersama</p>
+                <span class="card-arrow">→</span>
+            </div>
+
+            <div class="topic-card project-card" onclick="openTopic('projectrumah')">
+                <div class="card-icon">🏠</div>
+                <h3>Tugas Rumah</h3>
+                <p>4 Project untuk dikerjakan</p>
+                <span class="card-arrow">→</span>
+            </div>
+        </main>
+
+        <footer class="landing-footer">
+            <p>Gunakan tombol <kbd>←</kbd> <kbd>→</kbd> untuk navigasi slide</p>
+        </footer>
+    </div>
+
+    <!-- Slide Container -->
+    <div id="slideContainer" class="slide-container hidden">
+        <nav class="slide-nav">
+            <button class="nav-btn back-btn" onclick="showLanding()">
+                <span>←</span> Kembali
+            </button>
+            <h2 class="slide-title" id="slideTitle">Topic Title</h2>
+            <div class="slide-counter">
+                <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
+            </div>
+        </nav>
+
+        <div class="slide-content" id="slideContent">
+            <!-- Slide content will be injected here -->
+        </div>
+
+        <div class="slide-controls">
+            <button class="control-btn prev-btn" onclick="prevSlide()" id="prevBtn">
+                <span>←</span> Sebelumnya
+            </button>
+            
+            <div class="slide-indicators" id="slideIndicators">
+                <!-- Indicators will be injected here -->
+            </div>
+
+            <button class="control-btn next-btn" onclick="nextSlide()" id="nextBtn">
+                Selanjutnya <span>→</span>
+            </button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
