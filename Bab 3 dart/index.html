@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Dasar dalam Dart</title>
+    <link rel="icon" type="image/png" href="Dart1.png">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="presentation">
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <div class="slide-content title-slide">
+                <!-- Decorative Dart logos -->
+                <img src="Dart1.png" alt="Dart" class="floating-dart dart-1">
+                <img src="Dart1.png" alt="Dart" class="floating-dart dart-2">
+                <img src="Dart1.png" alt="Dart" class="floating-dart dart-3">
+                <img src="Dart1.png" alt="Dart" class="floating-dart dart-4">
+                <div class="dart-logo">
+                    <img src="Dart1.png" alt="Dart Logo" class="dart-icon-img">
+                </div>
+                <h1>TIPE DATA DASAR</h1>
+                <h2>dalam Pemrograman Dart</h2>
+                <div class="chapter-badge">BAB 3</div>
+                <div class="topics-preview">
+                    <span class="topic-tag">Number</span>
+                    <span class="topic-tag">Boolean</span>
+                    <span class="topic-tag">String</span>
+                    <span class="topic-tag">Dynamic</span>
+                    <span class="topic-tag">Type Casting</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Tujuan Pembelajaran -->
+        <section class="slide" id="slide-objectives">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">🎯</span>
+                    <h2>Tujuan Pembelajaran</h2>
+                </div>
+                <div class="summary-grid learning-objectives">
+                    <div class="summary-card">
+                        <div class="summary-icon">🔢</div>
+                        <h3>Number</h3>
+                        <p>Menggunakan int, double, dan num untuk operasi angka.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">✓✕</div>
+                        <h3>Boolean</h3>
+                        <p>Memakai true/false untuk logika dan pengambilan keputusan.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">📝</div>
+                        <h3>String</h3>
+                        <p>Mengolah teks, interpolation, dan method String dasar.</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🔁</div>
+                        <h3>Konversi</h3>
+                        <p>Menggunakan dynamic dan type casting secara tepat.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Number - Penjelasan -->
+        <section class="slide" id="slide-2">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.1</span>
+                    <h2>Number (Angka)</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="explanation-box">
+                        <h3>📌 Penjelasan</h3>
+                        <p>Tipe data <strong>Number</strong> dalam Dart memiliki dua jenis utama:</p>
+                        <ul class="type-list">
+                            <li>
+                                <span class="type-name">int</span>
+                                <span class="type-desc">Bilangan bulat tanpa desimal</span>
+                                <span class="type-example">contoh: 1, 100, -5</span>
+                            </li>
+                            <li>
+                                <span class="type-name">double</span>
+                                <span class="type-desc">Bilangan dengan desimal</span>
+                                <span class="type-example">contoh: 3.14, -0.5, 2.0</span>
+                            </li>
+                            <li>
+                                <span class="type-name">num</span>
+                                <span class="type-desc">Tipe umum yang bisa menampung int atau double</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💡</div>
+                        <p><strong>Penting:</strong> Dart adalah bahasa <em>strongly-typed</em>, artinya tipe data harus
+                            jelas meskipun bisa menggunakan <code>var</code> untuk inferensi otomatis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Number - Contoh -->
+        <section class="slide" id="slide-3">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.1</span>
+                    <h2>Number - Contoh Kode</h2>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">number_example.dart</span>
+                    </div>
+                    <pre class="code-block"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// Integer (bilangan bulat)</span>
+  <span class="keyword">int</span> umur = <span class="number">17</span>;
+  <span class="keyword">int</span> jumlahSiswa = <span class="number">30</span>;
+
+  <span class="comment">// Double (bilangan desimal)</span>
+  <span class="keyword">double</span> nilaiPI = <span class="number">3.14159</span>;
+  <span class="keyword">double</span> tinggi = <span class="number">165.5</span>;
+
+  <span class="comment">// Num (bisa int atau double)</span>
+  <span class="keyword">num</span> angka1 = <span class="number">100</span>;     <span class="comment">// int</span>
+  <span class="keyword">num</span> angka2 = <span class="number">99.9</span>;    <span class="comment">// double</span>
+
+  <span class="comment">// Operasi matematika</span>
+  <span class="keyword">int</span> penjumlahan = <span class="number">10</span> + <span class="number">5</span>;       <span class="comment">// 15</span>
+  <span class="keyword">double</span> pembagian = <span class="number">15</span> / <span class="number">3</span>;     <span class="comment">// 5.0 (selalu double)</span>
+  <span class="keyword">int</span> pembagianBulat = <span class="number">15</span> ~/ <span class="number">3</span>;  <span class="comment">// 5 (pembagian integer)</span>
+  <span class="keyword">int</span> sisaBagi = <span class="number">17</span> % <span class="number">5</span>;         <span class="comment">// 2 (modulus)</span>
+}</code></pre>
+                </div>
+                <div class="operators-grid">
+                    <div class="operator-card">
+                        <span class="op">+</span>
+                        <span class="op-name">Tambah</span>
+                    </div>
+                    <div class="operator-card">
+                        <span class="op">-</span>
+                        <span class="op-name">Kurang</span>
+                    </div>
+                    <div class="operator-card">
+                        <span class="op">*</span>
+                        <span class="op-name">Kali</span>
+                    </div>
+                    <div class="operator-card">
+                        <span class="op">/</span>
+                        <span class="op-name">Bagi</span>
+                    </div>
+                    <div class="operator-card">
+                        <span class="op">~/</span>
+                        <span class="op-name">Bagi Int</span>
+                    </div>
+                    <div class="operator-card">
+                        <span class="op">%</span>
+                        <span class="op-name">Modulus</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Boolean - Penjelasan -->
+        <section class="slide" id="slide-4">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.2</span>
+                    <h2>Boolean (True/False)</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="explanation-box">
+                        <h3>📌 Penjelasan</h3>
+                        <p>Tipe data <strong>Boolean</strong> atau <code>bool</code> hanya memiliki dua nilai:</p>
+                        <div class="bool-display">
+                            <div class="bool-value true">
+                                <span class="bool-icon">✓</span>
+                                <span class="bool-text">true</span>
+                                <span class="bool-label">(benar)</span>
+                            </div>
+                            <div class="bool-value false">
+                                <span class="bool-icon">✗</span>
+                                <span class="bool-text">false</span>
+                                <span class="bool-label">(salah)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="characteristics-box">
+                        <h4>Karakteristik Boolean di Dart:</h4>
+                        <ul>
+                            <li>Harus explicitly <code>true</code> atau <code>false</code></li>
+                            <li>Tidak ada "truthy" atau "falsy"</li>
+                            <li>Tipe data: <code>bool</code></li>
+                            <li>Digunakan dalam kondisi if-else, while, for</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Boolean - Contoh -->
+        <section class="slide" id="slide-5">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.2</span>
+                    <h2>Boolean - Contoh Kode</h2>
+                </div>
+                <div class="two-column">
+                    <div class="code-container small">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">boolean_example.dart</span>
+                        </div>
+                        <pre class="code-block"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// Boolean dasar</span>
+  <span class="keyword">bool</span> sudahLulus = <span class="bool">true</span>;
+  <span class="keyword">bool</span> sedangHujan = <span class="bool">false</span>;
+
+  <span class="comment">// Operator perbandingan</span>
+  <span class="keyword">bool</span> lebihBesar = <span class="number">10</span> > <span class="number">5</span>;   <span class="comment">// true</span>
+  <span class="keyword">bool</span> samaDengan = <span class="number">5</span> == <span class="number">5</span>;  <span class="comment">// true</span>
+  <span class="keyword">bool</span> tidakSama = <span class="number">7</span> != <span class="number">3</span>;   <span class="comment">// true</span>
+
+  <span class="comment">// Operator logika</span>
+  <span class="keyword">bool</span> dan = <span class="bool">true</span> && <span class="bool">false</span>;  <span class="comment">// false</span>
+  <span class="keyword">bool</span> atau = <span class="bool">true</span> || <span class="bool">false</span>; <span class="comment">// true</span>
+  <span class="keyword">bool</span> tidak = !<span class="bool">true</span>;        <span class="comment">// false</span>
+}</code></pre>
+                    </div>
+                    <div class="operators-table">
+                        <h4>Operator Perbandingan</h4>
+                        <table>
+                            <tr>
+                                <td><code>></code></td>
+                                <td>Lebih besar</td>
+                            </tr>
+                            <tr>
+                                <td><code><</code></td>
+                                <td>Lebih kecil</td>
+                            </tr>
+                            <tr>
+                                <td><code>==</code></td>
+                                <td>Sama dengan</td>
+                            </tr>
+                            <tr>
+                                <td><code>!=</code></td>
+                                <td>Tidak sama</td>
+                            </tr>
+                            <tr>
+                                <td><code>>=</code></td>
+                                <td>Lebih besar sama</td>
+                            </tr>
+                            <tr>
+                                <td><code><=</code></td>
+                                <td>Lebih kecil sama</td>
+                            </tr>
+                        </table>
+                        <h4>Operator Logika</h4>
+                        <table>
+                            <tr>
+                                <td><code>&&</code></td>
+                                <td>AND (semua harus true)</td>
+                            </tr>
+                            <tr>
+                                <td><code>||</code></td>
+                                <td>OR (salah satu true)</td>
+                            </tr>
+                            <tr>
+                                <td><code>!</code></td>
+                                <td>NOT (kebalikan)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: String - Penjelasan -->
+        <section class="slide" id="slide-6">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.3</span>
+                    <h2>String (Teks)</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="explanation-box">
+                        <h3>📌 Penjelasan</h3>
+                        <p>Tipe data <strong>String</strong> digunakan untuk menyimpan teks atau karakter.</p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">📝</span>
+                                <div>
+                                    <strong>Single/Double Quotes</strong>
+                                    <code>'...'</code> atau <code>"..."</code>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📄</span>
+                                <div>
+                                    <strong>Multi-line</strong>
+                                    <code>'''...'''</code>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔗</span>
+                                <div>
+                                    <strong>Interpolation</strong>
+                                    <code>$variabel</code> atau <code>${ekspresi}</code>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📁</span>
+                                <div>
+                                    <strong>Raw String</strong>
+                                    <code>r'...'</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: String - Contoh -->
+        <section class="slide" id="slide-7">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.3</span>
+                    <h2>String - Contoh Kode</h2>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">string_example.dart</span>
+                    </div>
+                    <pre class="code-block"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// String dasar</span>
+  <span class="keyword">String</span> nama = <span class="string">"Budi Santoso"</span>;
+  <span class="keyword">String</span> alamat = <span class="string">'Jl. Merdeka No. 123'</span>;
+
+  <span class="comment">// String interpolation</span>
+  <span class="keyword">String</span> namaDepan = <span class="string">"Budi"</span>;
+  <span class="keyword">int</span> umur = <span class="number">17</span>;
+  <span class="keyword">String</span> kalimat = <span class="string">'Nama saya $namaDepan, umur ${umur} tahun'</span>;
+
+  <span class="comment">// Methods string</span>
+  <span class="keyword">String</span> teks = <span class="string">"Belajar Programming"</span>;
+  <span class="function">print</span>(teks.<span class="property">length</span>);           <span class="comment">// 19</span>
+  <span class="function">print</span>(teks.<span class="function">toUpperCase</span>());    <span class="comment">// "BELAJAR PROGRAMMING"</span>
+  <span class="function">print</span>(teks.<span class="function">toLowerCase</span>());    <span class="comment">// "belajar programming"</span>
+  <span class="function">print</span>(teks.<span class="function">contains</span>(<span class="string">"Program"</span>)); <span class="comment">// true</span>
+  <span class="function">print</span>(teks.<span class="function">substring</span>(<span class="number">0</span>, <span class="number">7</span>));   <span class="comment">// "Belajar"</span>
+}</code></pre>
+                </div>
+                <div class="methods-grid">
+                    <div class="method-card"><code>.length</code><span>Panjang string</span></div>
+                    <div class="method-card"><code>.toUpperCase()</code><span>Huruf besar</span></div>
+                    <div class="method-card"><code>.toLowerCase()</code><span>Huruf kecil</span></div>
+                    <div class="method-card"><code>.contains()</code><span>Cek substring</span></div>
+                    <div class="method-card"><code>.substring()</code><span>Potong string</span></div>
+                    <div class="method-card"><code>.split()</code><span>Pecah string</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Dynamic - Penjelasan -->
+        <section class="slide" id="slide-8">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.4</span>
+                    <h2>Dynamic (Tipe Data Dinamis)</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="explanation-box">
+                        <h3>📌 Penjelasan</h3>
+                        <p>Dart menyediakan tipe <strong>dynamic</strong> untuk kasus khusus di mana tipe data bisa
+                            berubah.</p>
+                        <div class="comparison-table">
+                            <div class="compare-item">
+                                <span class="compare-type">var</span>
+                                <span class="compare-desc">Tipe ditentukan saat inisialisasi, <strong>tidak bisa
+                                        berubah</strong></span>
+                            </div>
+                            <div class="compare-item">
+                                <span class="compare-type">dynamic</span>
+                                <span class="compare-desc">Tipe <strong>bisa berubah</strong> kapan saja</span>
+                            </div>
+                            <div class="compare-item">
+                                <span class="compare-type">Object</span>
+                                <span class="compare-desc">Tipe dasar semua object, <strong>perlu
+                                        casting</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="warning-card">
+                        <div class="warning-icon">⚠️</div>
+                        <p>Penggunaan <code>dynamic</code> sebaiknya diminimalkan karena menghilangkan keuntungan
+                            type-safety!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 9: Dynamic - Contoh -->
+        <section class="slide" id="slide-9">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.4</span>
+                    <h2>Dynamic - Contoh Kode</h2>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">dynamic_example.dart</span>
+                    </div>
+                    <pre class="code-block"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// VAR - tipe ditentukan saat inisialisasi</span>
+  <span class="keyword">var</span> angka = <span class="number">100</span>;        <span class="comment">// Dart inference: int</span>
+  <span class="comment">// angka = "seratus";   // ERROR! Tidak bisa ubah tipe</span>
+  angka = <span class="number">200</span>;            <span class="comment">// OK, masih int</span>
+
+  <span class="comment">// DYNAMIC - tipe bisa berubah</span>
+  <span class="keyword">dynamic</span> data = <span class="number">100</span>;           <span class="comment">// Awalnya int</span>
+  <span class="function">print</span>(data.<span class="property">runtimeType</span>);      <span class="comment">// int</span>
+
+  data = <span class="string">"Seratus"</span>;             <span class="comment">// Berubah jadi String</span>
+  <span class="function">print</span>(data.<span class="property">runtimeType</span>);      <span class="comment">// String</span>
+
+  data = <span class="bool">true</span>;                  <span class="comment">// Berubah jadi bool</span>
+  <span class="function">print</span>(data.<span class="property">runtimeType</span>);      <span class="comment">// bool</span>
+
+  <span class="comment">// Mengecek tipe data</span>
+  <span class="function">print</span>(data <span class="keyword">is</span> <span class="keyword">bool</span>);          <span class="comment">// true</span>
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 10: Type Casting - Penjelasan -->
+        <section class="slide" id="slide-10">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.5</span>
+                    <h2>Konversi Tipe Data (Type Casting)</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="explanation-box">
+                        <h3>📌 Penjelasan</h3>
+                        <p><strong>Konversi tipe data</strong> sangat penting karena Dart adalah strongly-typed.</p>
+                        <div class="conversion-table">
+                            <h4>Cara Konversi di Dart:</h4>
+                            <table>
+                                <tr>
+                                    <td><code>int.parse()</code></td>
+                                    <td>String → int</td>
+                                </tr>
+                                <tr>
+                                    <td><code>double.parse()</code></td>
+                                    <td>String → double</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.toString()</code></td>
+                                    <td>Any → String</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.toInt()</code></td>
+                                    <td>double → int</td>
+                                </tr>
+                                <tr>
+                                    <td><code>.toDouble()</code></td>
+                                    <td>int → double</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: Type Casting - Contoh -->
+        <section class="slide" id="slide-11">
+            <div class="slide-content">
+                <div class="section-header">
+                    <span class="section-number">1.5</span>
+                    <h2>Type Casting - Contoh Kode</h2>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">type_casting.dart</span>
+                    </div>
+                    <pre class="code-block"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// STRING KE NUMBER</span>
+  <span class="keyword">String</span> stringAngka = <span class="string">"123"</span>;
+  <span class="keyword">int</span> angka = <span class="keyword">int</span>.<span class="function">parse</span>(stringAngka);      <span class="comment">// 123</span>
+  <span class="keyword">double</span> desimal = <span class="keyword">double</span>.<span class="function">parse</span>(<span class="string">"3.14"</span>);  <span class="comment">// 3.14</span>
+
+  <span class="comment">// Parse dengan default value (aman)</span>
+  <span class="keyword">int</span> aman = <span class="keyword">int</span>.<span class="function">tryParse</span>(<span class="string">"abc"</span>) ?? <span class="number">0</span>;  <span class="comment">// 0 jika gagal</span>
+
+  <span class="comment">// NUMBER KE STRING</span>
+  <span class="keyword">int</span> nilai = <span class="number">100</span>;
+  <span class="keyword">String</span> str = nilai.<span class="function">toString</span>();        <span class="comment">// "100"</span>
+
+  <span class="comment">// INT DAN DOUBLE</span>
+  <span class="keyword">double</span> des = <span class="number">9.8</span>;
+  <span class="keyword">int</span> bulat = des.<span class="function">toInt</span>();      <span class="comment">// 9 (truncate)</span>
+  <span class="keyword">int</span> bundar = des.<span class="function">round</span>();    <span class="comment">// 10 (pembulatan)</span>
+  <span class="keyword">int</span> bawah = des.<span class="function">floor</span>();     <span class="comment">// 9 (ke bawah)</span>
+  <span class="keyword">int</span> atas = des.<span class="function">ceil</span>();       <span class="comment">// 10 (ke atas)</span>
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 12: Mini Project Section Header -->
+        <section class="slide" id="slide-12">
+            <div class="slide-content title-slide">
+                <div class="project-icon">📚</div>
+                <h1>MINI PROJECT</h1>
+                <h2>di Kelas</h2>
+                <div class="project-list">
+                    <div class="project-item"><span class="project-num">1</span> Kalkulator Sederhana</div>
+                    <div class="project-item"><span class="project-num">2</span> Cek Kelulusan Siswa</div>
+                    <div class="project-item"><span class="project-num">3</span> Generator Kartu Identitas</div>
+                    <div class="project-item"><span class="project-num">4</span> Konverter Suhu</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Project 1 - Kalkulator -->
+        <section class="slide" id="slide-13">
+            <div class="slide-content">
+                <div class="project-header">
+                    <span class="project-badge">Project 1</span>
+                    <h2>🧮 Kalkulator Sederhana</h2>
+                    <p class="project-goal">Tujuan: Memahami Number dan operasi matematika</p>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">kalkulator.dart</span>
+                    </div>
+                    <pre class="code-block small-code"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">int</span> angka1 = <span class="number">15</span>;
+  <span class="keyword">int</span> angka2 = <span class="number">3</span>;
+
+  <span class="keyword">int</span> tambah = angka1 + angka2;
+  <span class="keyword">int</span> kurang = angka1 - angka2;
+  <span class="keyword">int</span> kali = angka1 * angka2;
+  <span class="keyword">double</span> bagi = angka1 / angka2;
+  <span class="keyword">int</span> bagiInt = angka1 ~/ angka2;
+  <span class="keyword">int</span> modulus = angka1 % angka2;
+
+  <span class="function">print</span>(<span class="string">"=== KALKULATOR SEDERHANA ==="</span>);
+  <span class="function">print</span>(<span class="string">"Penjumlahan: $angka1 + $angka2 = $tambah"</span>);
+  <span class="function">print</span>(<span class="string">"Pengurangan: $angka1 - $angka2 = $kurang"</span>);
+  <span class="function">print</span>(<span class="string">"Perkalian  : $angka1 × $angka2 = $kali"</span>);
+}</code></pre>
+                </div>
+                <div class="output-box">
+                    <h4>Output:</h4>
+                    <pre>=== KALKULATOR SEDERHANA ===
+Penjumlahan: 15 + 3 = 18
+Pengurangan: 15 - 3 = 12
+Perkalian  : 15 × 3 = 45</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 14: Project 2 - Kelulusan -->
+        <section class="slide" id="slide-14">
+            <div class="slide-content">
+                <div class="project-header">
+                    <span class="project-badge">Project 2</span>
+                    <h2>🎓 Cek Kelulusan Siswa</h2>
+                    <p class="project-goal">Tujuan: Memahami Boolean dan operator perbandingan</p>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">kelulusan.dart</span>
+                    </div>
+                    <pre class="code-block small-code"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">String</span> namaSiswa = <span class="string">"Andi Wijaya"</span>;
+  <span class="keyword">int</span> nilaiUjian = <span class="number">75</span>;
+  <span class="keyword">int</span> persenKehadiran = <span class="number">80</span>;
+  <span class="keyword">int</span> nilaiTugas = <span class="number">85</span>;
+
+  <span class="keyword">bool</span> nilaiCukup = nilaiUjian >= <span class="number">70</span>;
+  <span class="keyword">bool</span> kehadiranCukup = persenKehadiran >= <span class="number">75</span>;
+  <span class="keyword">bool</span> tugasCukup = nilaiTugas >= <span class="number">70</span>;
+
+  <span class="keyword">bool</span> lulus = nilaiCukup && kehadiranCukup && tugasCukup;
+
+  <span class="function">print</span>(<span class="string">"Nama: $namaSiswa"</span>);
+  <span class="function">print</span>(<span class="string">"STATUS: ${lulus ? 'LULUS ✓' : 'TIDAK LULUS ✗'}"</span>);
+}</code></pre>
+                </div>
+                <div class="output-box">
+                    <h4>Output:</h4>
+                    <pre>Nama: Andi Wijaya
+STATUS: LULUS ✓</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 15: Project 3 - Kartu Identitas -->
+        <section class="slide" id="slide-15">
+            <div class="slide-content">
+                <div class="project-header">
+                    <span class="project-badge">Project 3</span>
+                    <h2>🪪 Generator Kartu Identitas</h2>
+                    <p class="project-goal">Tujuan: Memahami String dan string interpolation</p>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">kartu_identitas.dart</span>
+                    </div>
+                    <pre class="code-block small-code"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">String</span> namaDepan = <span class="string">"Siti"</span>;
+  <span class="keyword">String</span> namaBelakang = <span class="string">"Nurhaliza"</span>;
+  <span class="keyword">String</span> kelas = <span class="string">"10A"</span>;
+  <span class="keyword">String</span> noInduk = <span class="string">"2024001"</span>;
+  <span class="keyword">String</span> sekolah = <span class="string">"SMA Nusantara"</span>;
+
+  <span class="keyword">String</span> namaLengkap = <span class="string">"$namaDepan $namaBelakang"</span>;
+  <span class="keyword">String</span> inisial = <span class="string">"${namaDepan[0]}${namaBelakang[0]}"</span>;
+
+  <span class="function">print</span>(<span class="string">"╔═══ KARTU PELAJAR DIGITAL ═══╗"</span>);
+  <span class="function">print</span>(<span class="string">"║  Nama: ${namaLengkap.toUpperCase()}"</span>);
+  <span class="function">print</span>(<span class="string">"║  NIS : $noInduk"</span>);
+  <span class="function">print</span>(<span class="string">"║  Kelas: $kelas | Inisial: $inisial"</span>);
+  <span class="function">print</span>(<span class="string">"╚═════════════════════════════╝"</span>);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 16: Project 4 - Konverter Suhu -->
+        <section class="slide" id="slide-16">
+            <div class="slide-content">
+                <div class="project-header">
+                    <span class="project-badge">Project 4</span>
+                    <h2>🌡️ Konverter Suhu</h2>
+                    <p class="project-goal">Tujuan: Memahami konversi tipe data dan perhitungan</p>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">konverter_suhu.dart</span>
+                    </div>
+                    <pre class="code-block small-code"><code><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="keyword">String</span> celsiusString = <span class="string">"25"</span>;  <span class="comment">// Input sebagai string</span>
+
+  <span class="comment">// Konversi string ke number</span>
+  <span class="keyword">double</span> celsius = <span class="keyword">double</span>.<span class="function">parse</span>(celsiusString);
+
+  <span class="comment">// Rumus konversi</span>
+  <span class="keyword">double</span> fahrenheit = (celsius * <span class="number">9</span>/<span class="number">5</span>) + <span class="number">32</span>;
+  <span class="keyword">double</span> kelvin = celsius + <span class="number">273.15</span>;
+  <span class="keyword">double</span> reamur = celsius * <span class="number">4</span>/<span class="number">5</span>;
+
+  <span class="function">print</span>(<span class="string">"╔═══ KONVERTER SUHU ═══╗"</span>);
+  <span class="function">print</span>(<span class="string">"║  Input: ${celsius}°C"</span>);
+  <span class="function">print</span>(<span class="string">"║  → Fahrenheit: ${fahrenheit.toStringAsFixed(1)}°F"</span>);
+  <span class="function">print</span>(<span class="string">"║  → Kelvin: ${kelvin.toStringAsFixed(2)}K"</span>);
+  <span class="function">print</span>(<span class="string">"║  → Reamur: ${reamur.toStringAsFixed(1)}°R"</span>);
+  <span class="function">print</span>(<span class="string">"╚══════════════════════╝"</span>);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 17: Summary -->
+        <section class="slide" id="slide-17">
+            <div class="slide-content title-slide">
+                <h1>📝 Ringkasan</h1>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-icon">🔢</div>
+                        <h3>Number</h3>
+                        <p>int, double, num untuk angka</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">✓✗</div>
+                        <h3>Boolean</h3>
+                        <p>true / false untuk logika</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">📝</div>
+                        <h3>String</h3>
+                        <p>Teks dengan interpolation</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🔄</div>
+                        <h3>Dynamic</h3>
+                        <p>var, dynamic, Object</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🔀</div>
+                        <h3>Type Casting</h3>
+                        <p>parse(), toString(), toInt()</p>
+                    </div>
+                </div>
+                <div class="end-message">
+                    <p>Terima kasih! 🎉</p>
+                    <p class="small">Selamat belajar Dart!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" id="prevBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+        </button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">18</span>
+        </div>
+        <button class="nav-btn next" id="nextBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
