@@ -67,6 +67,40 @@ body {
   background-size: 50px 50px;
 }
 
+.dart-decoration {
+  position: absolute;
+  width: 110px;
+  opacity: 0.12;
+  filter: drop-shadow(0 0 25px rgba(19, 185, 253, 0.65));
+  animation: dartDrift 16s ease-in-out infinite;
+}
+
+.deco-1 {
+  top: 7%;
+  left: 6%;
+}
+
+.deco-2 {
+  right: 8%;
+  bottom: 13%;
+  width: 150px;
+  opacity: 0.1;
+  animation-delay: -5s;
+}
+
+.deco-3 {
+  top: 42%;
+  right: 18%;
+  width: 76px;
+  opacity: 0.08;
+  animation-delay: -10s;
+}
+
+@keyframes dartDrift {
+  0%, 100% { transform: translateY(0) rotate(-8deg) scale(1); }
+  50% { transform: translateY(-28px) rotate(10deg) scale(1.08); }
+}
+
 .floating-orb {
   position: absolute;
   border-radius: 50%;
@@ -212,6 +246,20 @@ p {
   animation: pulse 3s ease-in-out infinite;
 }
 
+.title-dart-logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 35px rgba(19, 185, 253, 0.7));
+  animation: pulseLogo 3s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 35px rgba(19, 185, 253, 0.7)); }
+  50% { transform: scale(1.06); filter: drop-shadow(0 0 55px rgba(0, 196, 180, 0.85)); }
+}
+
 @keyframes pulse {
   0%, 100% { transform: scale(1); box-shadow: var(--shadow-glow); }
   50% { transform: scale(1.05); box-shadow: 0 0 80px rgba(1, 117, 194, 0.5); }
@@ -344,6 +392,39 @@ p {
   margin: 0 auto;
 }
 
+.scrollable-timeline {
+  max-height: min(56vh, 520px);
+  overflow-y: auto;
+  padding: 0 0.7rem 0.2rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dart-secondary) rgba(255, 255, 255, 0.08);
+}
+
+.scrollable-timeline::after {
+  content: "";
+  position: sticky;
+  bottom: -0.2rem;
+  display: block;
+  height: 28px;
+  margin-top: -28px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgba(10, 14, 23, 0.88));
+}
+
+.scrollable-timeline::-webkit-scrollbar {
+  width: 9px;
+}
+
+.scrollable-timeline::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+}
+
+.scrollable-timeline::-webkit-scrollbar-thumb {
+  background: var(--gradient-1);
+  border-radius: 99px;
+}
+
 .timeline-item {
   display: flex;
   gap: 1.5rem;
@@ -374,6 +455,63 @@ p {
 .timeline-content p {
   font-size: 0.95rem;
   margin: 0;
+}
+
+/*===== Founder Cards =====*/
+.founder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin: 2rem auto 1.25rem;
+  max-width: 980px;
+}
+
+.founder-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1.25rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.founder-card:hover {
+  background: rgba(1, 117, 194, 0.12);
+  border-color: var(--dart-primary);
+  transform: translateY(-5px);
+}
+
+.founder-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+}
+
+.founder-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.founder-info p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.founder-note {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(0, 196, 180, 0.3);
+  border-radius: 14px;
+  background: rgba(0, 196, 180, 0.08);
+  color: var(--text-secondary);
+  text-align: left;
 }
 
 /*===== Feature Grid =====*/
@@ -763,6 +901,19 @@ p {
     gap: 0.5rem;
   }
 
+  .founder-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .founder-card {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .founder-photo {
+    width: 120px;
+    height: 120px;
+  }
+
   .comparison-table {
     font-size: 0.85rem;
   }
@@ -790,5 +941,18 @@ p {
 
   .app-gallery {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .founder-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .founder-photo {
+    margin: 0 auto;
+  }
+
+  .founder-note {
+    text-align: center;
   }
 }

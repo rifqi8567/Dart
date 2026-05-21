@@ -21,6 +21,63 @@
   --error: #f87171;
 }
 
+@media (max-width: 900px) {
+  .objective-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .objective-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Learning objectives */
+.learning-objectives {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.learning-objectives h2 {
+  margin: 0 0 1rem;
+  color: #13b9fd;
+  text-align: center;
+}
+
+.objective-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.objective-grid article {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.objective-grid strong,
+.objective-grid span {
+  display: block;
+}
+
+.objective-grid strong {
+  margin-bottom: 0.5rem;
+}
+
+.objective-grid span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -775,5 +832,17 @@ code {
 
   .card-icon {
     font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .objective-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .objective-grid {
+    grid-template-columns: 1fr;
   }
 }

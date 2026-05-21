@@ -11,6 +11,9 @@
   <div class="background-effects">
     <div class="bg-gradient"></div>
     <div class="bg-grid"></div>
+    <img src="../Dart1.png" alt="" class="dart-decoration deco-1">
+    <img src="../Dart1.png" alt="" class="dart-decoration deco-2">
+    <img src="../Dart1.png" alt="" class="dart-decoration deco-3">
     <div class="floating-orb orb-1"></div>
     <div class="floating-orb orb-2"></div>
     <div class="floating-orb orb-3"></div>
@@ -25,7 +28,7 @@
     <!-- Slide 1: Title -->
     <section class="slide active title-slide">
       <div class="slide-content">
-        <div class="dart-logo">🎯</div>
+        <img src="../Dart1.png" alt="Logo Dart" class="title-dart-logo">
         <h1>Dart Programming Fundamentals</h1>
         <p class="subtitle">Modul Pengenalan dan Sejarah Dart</p>
         <p>Perjalanan Anda menuju penguasaan bahasa pemrograman modern dimulai di sini!</p>
@@ -48,6 +51,10 @@
           <div class="objective-item">
             <span class="check">✅</span>
             <span>Mengetahui sejarah dan evolusi Dart</span>
+          </div>
+          <div class="objective-item">
+            <span class="check">✅</span>
+            <span>Mengenal tokoh perancang Dart: Lars Bak dan Kasper Lund</span>
           </div>
           <div class="objective-item">
             <span class="check">✅</span>
@@ -100,51 +107,126 @@
       </div>
     </section>
 
-    <!-- Slide 4: Dart History Timeline -->
+    <!-- Slide 4: Dart Founders -->
+    <section class="slide">
+      <div class="slide-content">
+        <h2>Siapa Penemu Dart?</h2>
+        <p>
+          Dart tidak dibuat oleh satu orang saja. Bahasa ini dirancang di Google
+          oleh <span class="highlight">Lars Bak</span> dan
+          <span class="highlight">Kasper Lund</span>, dua engineer asal Denmark
+          yang berpengalaman dalam virtual machine dan bahasa pemrograman.
+        </p>
+
+        <div class="founder-grid">
+          <article class="founder-card">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Lars%20Bak.png"
+              alt="Lars Bak, salah satu perancang Dart"
+              class="founder-photo"
+            />
+            <div class="founder-info">
+              <h3>Lars Bak</h3>
+              <p>
+                Computer programmer asal Denmark. Dikenal sebagai ahli virtual
+                machine, ikut memimpin pengembangan V8 JavaScript engine, lalu
+                ikut merancang Dart.
+              </p>
+            </div>
+          </article>
+
+          <article class="founder-card">
+            <img
+              src="https://verdich.dk/kasper/headshot.jpg"
+              alt="Kasper Lund, salah satu perancang Dart"
+              class="founder-photo"
+            />
+            <div class="founder-info">
+              <h3>Kasper Lund</h3>
+              <p>
+                Software engineer asal Denmark. Pernah bekerja di Google pada
+                V8 dan menjadi engineering lead untuk project Dart.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="founder-note">
+          <strong>Intinya:</strong> Lars Bak dan Kasper Lund adalah tokoh utama
+          perancang Dart. Google menjadi perusahaan yang mengembangkan dan
+          merilis Dart ke publik.
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Dart History Timeline -->
     <section class="slide">
       <div class="slide-content">
         <h2>📅 Sejarah Dart</h2>
-        <div class="timeline">
+        <p>
+          Dart muncul dari kebutuhan Google terhadap bahasa yang lebih terstruktur
+          untuk membuat aplikasi web besar, tetapi tetap cepat dan nyaman untuk
+          developer.
+        </p>
+        <div class="timeline scrollable-timeline">
           <div class="timeline-item">
             <span class="timeline-year">🎂 2011</span>
             <div class="timeline-content">
               <h4>Lahirnya Dart</h4>
-              <p>Diumumkan di konferensi GOTO oleh Lars Bak & Kasper Lund</p>
+              <p>
+                Diumumkan di konferensi GOTO Aarhus. Project Dart dipimpin oleh
+                Lars Bak dan Kasper Lund di Google.
+              </p>
             </div>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">✅ 2013</span>
             <div class="timeline-content">
               <h4>Dart 1.0</h4>
-              <p>Rilis stabil pertama, fokus pada web development</p>
+              <p>
+                Rilis stabil pertama. Pada fase ini Dart banyak diarahkan untuk
+                web development dan compile ke JavaScript.
+              </p>
             </div>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">📱 2015-17</span>
             <div class="timeline-content">
               <h4>Pivoting ke Mobile</h4>
-              <p>Google mulai fokus ke Flutter, Dart sebagai bahasa utamanya</p>
+              <p>
+                Strategi Dart berubah: fokus makin kuat ke Flutter sehingga Dart
+                menjadi bahasa utama untuk membuat aplikasi mobile lintas platform.
+              </p>
             </div>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">💪 2018</span>
             <div class="timeline-content">
               <h4>Dart 2.0 & Flutter 1.0</h4>
-              <p>Major update dengan type system yang lebih kuat</p>
+              <p>
+                Dart 2.0 membawa type system yang lebih kuat. Flutter 1.0 ikut
+                membuat Dart semakin populer di kalangan developer mobile.
+              </p>
             </div>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">🛡️ 2020</span>
             <div class="timeline-content">
               <h4>Sound Null Safety</h4>
-              <p>Game changer! Eliminasi null reference errors</p>
+              <p>
+                Null safety membantu mencegah error karena nilai kosong/null.
+                Fitur ini membuat kode Dart lebih aman dan mudah dirawat.
+              </p>
             </div>
           </div>
           <div class="timeline-item">
             <span class="timeline-year">🚀 2024-25</span>
             <div class="timeline-content">
               <h4>Modern Dart 3.x</h4>
-              <p>Pattern matching, records, WASM support, enterprise adoption</p>
+              <p>
+                Dart berkembang dengan fitur modern seperti records, pattern
+                matching, dan dukungan platform yang makin luas.
+              </p>
             </div>
           </div>
         </div>
@@ -501,7 +583,7 @@
   <div class="nav-controls">
     <button class="nav-btn" id="prevBtn" title="Previous (←)">←</button>
     <div class="slide-counter">
-      <span id="currentSlide">1</span> / <span id="totalSlides">14</span>
+      <span id="currentSlide">1</span> / <span id="totalSlides">15</span>
     </div>
     <button class="nav-btn" id="nextBtn" title="Next (→)">→</button>
   </div>
