@@ -295,6 +295,17 @@ body {
     letter-spacing: 1px;
 }
 
+.author-line {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.author-line strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
 /* ====== GRID CARDS ====== */
 .grid-container {
     display: grid;
