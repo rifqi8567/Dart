@@ -3,151 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Modul Pembelajaran Dart - List, Set, Map, Symbol, If-Else, Switch Case, Break & Continue"
+    <title>Bab 5: Operator Dart - Dart Programming</title>
+    <link rel="icon" type="image/png" href="../Dart1.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
     />
-    <title>Modul Dart - Bab 5</title>
-    <link rel="icon" type="image/png" href="Dart1.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Prism.js for syntax highlighting -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="../shared-style.css?v=4" />
   </head>
   <body>
-    <!-- Floating Dart Icons -->
+    <!-- Floating Dart Icons Background -->
     <div class="floating-icons">
-      <img src="Dart1.png" alt="Dart" class="float-icon icon-1" />
-      <img src="Dart1.png" alt="Dart" class="float-icon icon-2" />
-      <img src="Dart1.png" alt="Dart" class="float-icon icon-3" />
+      <img src="../Dart1.png" class="float-icon" style="top: 5%; left: 5%; animation-delay: 0s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 15%; right: 10%; animation-delay: 1s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 60%; left: 8%; animation-delay: 2s" />
+      <img src="../Dart1.png" class="float-icon" style="bottom: 20%; right: 5%; animation-delay: 0.5s" />
     </div>
 
     <!-- Landing Page -->
-    <div id="landing" class="landing-container">
-      <header class="landing-header">
-        <img src="Dart1.png" alt="Dart Logo" class="main-logo" />
-        <h1>Modul Dart</h1>
-        <p class="subtitle">
-          List, Set, Map, Symbol, If-Else, Switch Case, Break & Continue
-        </p>
-      </header>
+    <section id="landing" class="landing-page active">
+      <div class="landing-container">
+        <div class="hero-section">
+          <div class="main-icon-container">
+            <img src="../Dart1.png" alt="Dart Logo" class="main-dart-icon" />
+            <div class="icon-glow"></div>
+          </div>
+          <h1 class="title">
+            <span class="title-line">BAB 5</span>
+            <span class="title-main">Operator Dart</span>
+            <span class="title-sub">Lengkap</span>
+          </h1>
+          <p class="subtitle">
+            Kuasai penggunaan berbagai operator di Dart: kalkulasi aritmatika, perbandingan relasional, evaluasi logika bercabang, dan singkatan penulisan kode assignment!
+          </p>
+        </div>
 
-      <section class="learning-objectives" aria-label="Tujuan pembelajaran">
-        <h2>Tujuan Pembelajaran</h2>
-        <div class="objective-grid">
-          <article>
-            <strong>Collection</strong>
-            <span>Menggunakan List, Set, dan Map untuk menyimpan banyak data.</span>
-          </article>
-          <article>
-            <strong>Symbol</strong>
-            <span>Mengenal Symbol sebagai identifier unik di Dart.</span>
-          </article>
-          <article>
-            <strong>Percabangan</strong>
-            <span>Menerapkan if-else dan switch case untuk keputusan program.</span>
-          </article>
-          <article>
-            <strong>Kontrol Alur</strong>
-            <span>Menggunakan break dan continue dalam proses perulangan.</span>
-          </article>
-        </div>
-      </section>
+        <section class="learning-objectives" aria-label="Tujuan pembelajaran">
+          <h2>Tujuan Pembelajaran</h2>
+          <div class="objective-grid">
+            <article>
+              <strong>Aritmatika</strong>
+              <span>Mampu menggunakan operator matematika dasar termasuk pembagian integer dan sisa bagi.</span>
+            </article>
+            <article>
+              <strong>Relasional</strong>
+              <span>Memahami perbandingan nilai untuk menghasilkan evaluasi benar/salah (boolean).</span>
+            </article>
+            <article>
+              <strong>Logika &amp; Assignment</strong>
+              <span>Menguasai gerbang logika (AND, OR, NOT) serta assignment majemuk dan null-aware.</span>
+            </article>
+            <article>
+              <strong>Implementasi</strong>
+              <span>Dapat menggabungkan berbagai operator untuk memecahkan logika perhitungan rumit.</span>
+            </article>
+          </div>
+        </section>
 
-      <div class="topics-grid">
-        <div class="topic-card" onclick="showTopic('list')">
-          <div class="card-icon">📋</div>
-          <h3>List</h3>
-          <p>Koleksi terurut dari item-item</p>
+        <div class="topics-grid">
+          <div class="topic-card" data-topic="aritmatika">
+            <div class="card-icon"><i class="fas fa-plus-minus"></i></div>
+            <h3>Operator Aritmatika</h3>
+            <p>Operasi Dasar &amp; Increment/Decrement</p>
+            <span class="card-number">01</span>
+          </div>
+
+          <div class="topic-card" data-topic="relasional">
+            <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+            <h3>Operator Perbandingan</h3>
+            <p>Evaluasi Relasional (==, !=, >, &lt;)</p>
+            <span class="card-number">02</span>
+          </div>
+
+          <div class="topic-card" data-topic="logika">
+            <div class="card-icon"><i class="fas fa-brain"></i></div>
+            <h3>Operator Logika</h3>
+            <p>Gerbang Evaluasi Kondisi (&&, ||, !)</p>
+            <span class="card-number">03</span>
+          </div>
+
+          <div class="topic-card" data-topic="assignment">
+            <div class="card-icon"><i class="fas fa-pen-fancy"></i></div>
+            <h3>Operator Assignment</h3>
+            <p>Compound &amp; Null-Aware Assignment</p>
+            <span class="card-number">04</span>
+          </div>
+
+          <div class="topic-card" data-topic="tugas">
+            <div class="card-icon"><i class="fas fa-edit"></i></div>
+            <h3>Latihan Mandiri</h3>
+            <p>Tugas Rumah Kreatif</p>
+            <span class="card-number">05</span>
+          </div>
         </div>
-        <div class="topic-card" onclick="showTopic('set')">
-          <div class="card-icon">🔢</div>
-          <h3>Set</h3>
-          <p>Koleksi item unik</p>
-        </div>
-        <div class="topic-card" onclick="showTopic('map')">
-          <div class="card-icon">🗺️</div>
-          <h3>Map</h3>
-          <p>Pasangan key-value</p>
-        </div>
-        <div class="topic-card" onclick="showTopic('symbol')">
-          <div class="card-icon">🔣</div>
-          <h3>Symbol</h3>
-          <p>Identifier unik</p>
-        </div>
-        <div class="topic-card" onclick="showTopic('ifelse')">
-          <div class="card-icon">🔀</div>
-          <h3>If-Else</h3>
-          <p>Struktur kontrol keputusan</p>
-        </div>
-        <div class="topic-card" onclick="showTopic('switch')">
-          <div class="card-icon">🎛️</div>
-          <h3>Switch Case</h3>
-          <p>Multiple kondisi untuk satu variabel</p>
-        </div>
-        <div class="topic-card" onclick="showTopic('breakContinue')">
-          <div class="card-icon">⏭️</div>
-          <h3>Break & Continue</h3>
-          <p>Kontrol alur loop</p>
-        </div>
-        <div
-          class="topic-card project-card"
-          onclick="showTopic('miniProjects')"
-        >
-          <div class="card-icon">💻</div>
-          <h3>Mini Projects</h3>
-          <p>4 project praktik kelas</p>
-        </div>
-        <div class="topic-card homework-card" onclick="showTopic('tugasRumah')">
-          <div class="card-icon">📝</div>
-          <h3>Tugas Rumah</h3>
-          <p>4 tugas lengkap dengan panduan</p>
+
+        <div class="start-btn-container">
+          <button class="start-btn" onclick="startPresentation()">
+            <span>Mulai Belajar</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
+    </section>
 
-      <footer class="landing-footer">
-        <p>
-          Gunakan <kbd>←</kbd> <kbd>→</kbd> untuk navigasi |
-          <kbd>Esc</kbd> kembali ke menu
-        </p>
-      </footer>
-    </div>
-
-    <!-- Slide Container -->
-    <div id="slideContainer" class="slide-container hidden">
+    <!-- Slides Container -->
+    <section id="slides-container" class="slides-section">
       <div class="slide-header">
-        <button class="back-btn" onclick="showLanding()">
-          <span>←</span> Menu
+        <button class="nav-btn home-btn" onclick="goToLanding()">
+          <i class="fas fa-home"></i>
         </button>
-        <div class="topic-title" id="topicTitle">List</div>
-        <div class="progress-info">
-          <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="slide-counter">
+          <span id="currentSlide">1</span> / <span id="totalSlides">1</span>
         </div>
       </div>
 
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-
-      <div class="slide-content" id="slideContent">
-        <!-- Slide content will be injected here -->
+      <div class="slides-wrapper" id="slidesWrapper">
+        <!-- Slides will be dynamically inserted here -->
       </div>
 
       <div class="slide-navigation">
-        <button class="nav-btn prev-btn" onclick="prevSlide()" id="prevBtn">
-          <span>←</span> Sebelumnya
+        <button class="nav-btn prev-btn" onclick="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+          <span>Sebelumnya</span>
         </button>
-        <button class="nav-btn next-btn" onclick="nextSlide()" id="nextBtn">
-          Selanjutnya <span>→</span>
+        <button class="nav-btn next-btn" onclick="nextSlide()">
+          <span>Selanjutnya</span>
+          <i class="fas fa-chevron-right"></i>
         </button>
       </div>
-    </div>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-dart.min.js"></script>
     <script src="slides-data.js"></script>
-    <script src="app.js"></script>
+    <script src="../shared-script.js?v=4"></script>
   </body>
 </html>

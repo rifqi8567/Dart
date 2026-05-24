@@ -3,168 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Presentasi Dart - Higher Order Function, Anonymous Function, dan Scope"
-    />
-    <title>Dart - Higher Order Function, Anonymous Function & Scope</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="Dart1.png" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Bab 8: Collections secara Mendalam - Dart Programming</title>
+    <link rel="icon" type="image/png" href="../Dart1.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../shared-style.css?v=4" />
   </head>
   <body>
-    <!-- Background Animation -->
-    <div class="bg-animation"></div>
-
-    <!-- Floating Dart Logos (Decoration) -->
-    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
-    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
-    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
-    <img src="Dart1.png" alt="" class="floating-logo" aria-hidden="true" />
-
-    <!-- ==================== LANDING PAGE ==================== -->
-    <main class="landing-page">
-      <header class="header">
-        <img src="Dart1.png" alt="Dart Logo" class="header-logo" />
-        <h1>Dart Programming</h1>
-        <p>Modul: Higher Order Function, Anonymous Function & Scope</p>
-        <span class="module-badge">Bab 8</span>
-      </header>
-
-      <section class="learning-objectives" aria-label="Tujuan pembelajaran">
-        <h2>Tujuan Pembelajaran</h2>
-        <div class="objective-grid">
-          <article>
-            <strong>Higher Order Function</strong>
-            <span>Memahami function yang menerima atau mengembalikan function lain.</span>
-          </article>
-          <article>
-            <strong>Anonymous Function</strong>
-            <span>Menggunakan function tanpa nama sebagai callback dan operasi sekali pakai.</span>
-          </article>
-          <article>
-            <strong>Scope</strong>
-            <span>Membedakan global, local, dan block scope dalam program Dart.</span>
-          </article>
-          <article>
-            <strong>Pipeline</strong>
-            <span>Menerapkan function lanjutan dalam transformasi data sederhana.</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="topics-grid">
-        <!-- Topic 1: Higher Order Function -->
-        <article class="topic-card" data-topic="higherOrderFunction">
-          <span class="icon">🚀</span>
-          <h2>Higher Order Function</h2>
-          <p>
-            Fungsi yang dapat menerima fungsi lain sebagai parameter atau
-            mengembalikan fungsi sebagai hasil
-          </p>
-          <span class="slide-count">6 slides</span>
-        </article>
-
-        <!-- Topic 2: Anonymous Function -->
-        <article class="topic-card" data-topic="anonymousFunction">
-          <span class="icon">🎭</span>
-          <h2>Anonymous Function</h2>
-          <p>
-            Fungsi tanpa nama (lambda/closure) yang sangat berguna untuk operasi
-            sekali pakai
-          </p>
-          <span class="slide-count">5 slides</span>
-        </article>
-
-        <!-- Topic 3: Scope -->
-        <article class="topic-card" data-topic="scope">
-          <span class="icon">🔭</span>
-          <h2>Scope</h2>
-          <p>
-            Memahami cakupan variabel: Global, Local, dan Block scope dalam Dart
-          </p>
-          <span class="slide-count">6 slides</span>
-        </article>
-
-        <!-- Topic 4: Tugas Rumah -->
-        <article class="topic-card" data-topic="tugasRumah">
-          <span class="icon">📝</span>
-          <h2>Tugas Rumah</h2>
-          <p>
-            4 Project untuk latihan mandiri: Sistem Penilaian, Todo List, String
-            Validator, dan Data Pipeline
-          </p>
-          <span class="slide-count">4 slides</span>
-        </article>
-
-        <!-- Topic 5: Kesimpulan -->
-        <article class="topic-card" data-topic="kesimpulan">
-          <span class="icon">📌</span>
-          <h2>Kesimpulan</h2>
-          <p>
-            Ringkasan materi Higher Order Function, Anonymous Function, dan
-            Scope
-          </p>
-          <span class="slide-count">1 slide</span>
-        </article>
-      </section>
-    </main>
-
-    <!-- ==================== SLIDE VIEWER ==================== -->
-    <div class="slide-viewer">
-      <!-- Slide Header -->
-      <header class="slide-header">
-        <button class="back-btn">
-          <span>←</span>
-          <span>Kembali</span>
-        </button>
-
-        <div class="topic-title">
-          <img src="Dart1.png" alt="Dart" />
-          <h2>Higher Order Function</h2>
-        </div>
-
-        <div class="progress-info">
-          <span class="slide-counter">1 / 6</span>
-          <div class="progress-bar">
-            <div class="fill" style="width: 16.66%"></div>
-          </div>
-        </div>
-      </header>
-
-      <!-- Slide Content -->
-      <section class="slide-content-area">
-        <div class="slide-content">
-          <!-- Content will be injected by JavaScript -->
-        </div>
-      </section>
-
-      <!-- Slide Navigation -->
-      <nav class="slide-navigation">
-        <button class="nav-btn prev" disabled>← Sebelumnya</button>
-        <button class="nav-btn next">Selanjutnya →</button>
-      </nav>
-
-      <!-- Keyboard Hint -->
-      <div class="keyboard-hint">
-        <kbd>←</kbd> <kbd>→</kbd> untuk navigasi &nbsp;|&nbsp;
-        <kbd>Esc</kbd> untuk kembali
-      </div>
+    <!-- Floating Dart Icons Background -->
+    <div class="floating-icons">
+      <img src="../Dart1.png" class="float-icon" style="top: 5%; left: 5%; animation-delay: 0s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 15%; right: 10%; animation-delay: 1s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 60%; left: 8%; animation-delay: 2s" />
+      <img src="../Dart1.png" class="float-icon" style="bottom: 20%; right: 5%; animation-delay: 0.5s" />
     </div>
 
-    <!-- Scripts -->
+    <!-- Landing Page -->
+    <section id="landing" class="landing-page active">
+      <div class="landing-container">
+        <div class="hero-section">
+          <div class="main-icon-container">
+            <img src="../Dart1.png" alt="Dart Logo" class="main-dart-icon" />
+            <div class="icon-glow"></div>
+          </div>
+          <h1 class="title">
+            <span class="title-line">BAB 8</span>
+            <span class="title-main">Collections</span>
+            <span class="title-sub">secara Mendalam</span>
+          </h1>
+          <p class="subtitle">
+            Kuasai penyimpanan sekumpulan data di Dart: fleksibilitas List terurut, keunikan data Set, pemetaan key-value Map, antrean Queue, serta pemanfaatan Spread Operator dan Collection Control Flow modern!
+          </p>
+        </div>
+
+        <section class="learning-objectives" aria-label="Tujuan pembelajaran">
+          <h2>Tujuan Pembelajaran</h2>
+          <div class="objective-grid">
+            <article>
+              <strong>List &amp; Set</strong>
+              <span>Memahami struktur data List terurut dan pemanfaatan Set untuk data unik bebas duplikat.</span>
+            </article>
+            <article>
+              <strong>Map &amp; Queue</strong>
+              <span>Menguasai pemetaan key-value pada Map dan manipulasi ujung antrean menggunakan Queue.</span>
+            </article>
+            <article>
+              <strong>Spread Operator</strong>
+              <span>Mampu menggabungkan data antar collection secara elegan menggunakan spread operator (...).</span>
+            </article>
+            <article>
+              <strong>Collection Control</strong>
+              <span>Menguasai collection-if dan collection-for untuk menyusun elemen collection berkondisi.</span>
+            </article>
+          </div>
+        </section>
+
+        <div class="topics-grid">
+          <div class="topic-card" data-topic="listset">
+            <div class="card-icon"><i class="fas fa-list-ol"></i></div>
+            <h3>List &amp; Set</h3>
+            <p>Koleksi Terurut &amp; Koleksi Nilai Unik</p>
+            <span class="card-number">01</span>
+          </div>
+
+          <div class="topic-card" data-topic="mapqueue">
+            <div class="card-icon"><i class="fas fa-atlas"></i></div>
+            <h3>Map &amp; Queue</h3>
+            <p>Key-Value Pairs &amp; Struktur Antrean</p>
+            <span class="card-number">02</span>
+          </div>
+
+          <div class="topic-card" data-topic="modern">
+            <div class="card-icon"><i class="fas fa-magic"></i></div>
+            <h3>Modern Collection</h3>
+            <p>Spread Operator, Collection-If &amp; For</p>
+            <span class="card-number">03</span>
+          </div>
+
+          <div class="topic-card" data-topic="tugas">
+            <div class="card-icon"><i class="fas fa-edit"></i></div>
+            <h3>Latihan Mandiri</h3>
+            <p>Tugas Rumah Kreatif</p>
+            <span class="card-number">04</span>
+          </div>
+        </div>
+
+        <div class="start-btn-container">
+          <button class="start-btn" onclick="startPresentation()">
+            <span>Mulai Belajar</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slides Container -->
+    <section id="slides-container" class="slides-section">
+      <div class="slide-header">
+        <button class="nav-btn home-btn" onclick="goToLanding()">
+          <i class="fas fa-home"></i>
+        </button>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="slide-counter">
+          <span id="currentSlide">1</span> / <span id="totalSlides">1</span>
+        </div>
+      </div>
+
+      <div class="slides-wrapper" id="slidesWrapper">
+        <!-- Slides will be dynamically inserted here -->
+      </div>
+
+      <div class="slide-navigation">
+        <button class="nav-btn prev-btn" onclick="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+          <span>Sebelumnya</span>
+        </button>
+        <button class="nav-btn next-btn" onclick="nextSlide()">
+          <span>Selanjutnya</span>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
     <script src="slides-data.js"></script>
-    <script src="script.js"></script>
+    <script src="../shared-script.js?v=4"></script>
   </body>
 </html>

@@ -1,735 +1,259 @@
-// Dart PPT - Slides Data
-// Module: Higher Order Function, Anonymous Function, Scope
-
+// Slides Data untuk Bab 8: Collections secara Mendalam
 const slidesData = {
-  // ==================== MODULE 1: HIGHER ORDER FUNCTION ====================
-  higherOrderFunction: {
-    title: "Higher Order Function",
-    icon: "🚀",
-    color: "#0175C2",
-    slides: [
-      {
-        title: "Higher Order Function",
-        subtitle: "Fungsi yang Powerful & Fleksibel",
-        type: "title",
-        content: `
-          <div class="intro-box">
-            <h3>📖 Apa itu Higher Order Function?</h3>
-            <p>Higher Order Function adalah fungsi yang dapat:</p>
-            <ul>
-              <li>✅ Menerima fungsi lain sebagai <strong>parameter</strong></li>
-              <li>✅ Mengembalikan fungsi sebagai <strong>hasil</strong></li>
-            </ul>
-            <p class="highlight">Konsep ini memungkinkan kode yang lebih <em>fleksibel</em> dan <em>reusable</em>!</p>
+  listset: [
+    {
+      title: "List (Koleksi Terurut)",
+      category: "Collections",
+      icon: "fas fa-list-ol",
+      content: `
+        <p class="text-content">
+          <strong>List</strong> adalah kumpulan item terurut yang dimulai dari indeks 0. List mengizinkan duplikat data dan sangat fleksibel.
+        </p>
+        <div class="info-box tip">
+          <div class="info-box-title"><i class="fas fa-shapes"></i> Analogi Dunia Nyata: Koleksi Barang</div>
+          <p>Bayangkan <strong>List</strong> seperti daftar absensi siswa (berurutan dari nomor 0, boleh ada nama duplikat). <strong>Set</strong> seperti gantungan kunci rumah (semua kunci wajib unik agar tidak rancu). <strong>Map</strong> seperti buku telepon (mencari nomor HP/Value berdasarkan nama teman/Key).</p>
+        </div>
+        <div class="mermaid">
+        flowchart TD
+            subgraph List
+            L1["Indeks 0: Budi"]
+            L2["Indeks 1: Siti"]
+            L3["Indeks 2: Budi"]
+            end
+            
+            subgraph Set
+            S1{Elektronik}
+            S2{Pakaian}
+            end
+            
+            subgraph Map
+            M1["Key: Indonesia"] --> V1["Value: Jakarta"]
+            M2["Key: Jepang"] --> V2["Value: Tokyo"]
+            end
+            
+            style L1 fill:#0175c2,stroke:#13b9fd,stroke-width:2px,color:#fff
+            style L2 fill:#0175c2,stroke:#13b9fd,stroke-width:2px,color:#fff
+            style L3 fill:#0175c2,stroke:#13b9fd,stroke-width:2px,color:#fff
+            
+            style S1 fill:#8338ec,stroke:#1de9b6,stroke-width:2px,color:#fff
+            style S2 fill:#8338ec,stroke:#1de9b6,stroke-width:2px,color:#fff
+            
+            style M1 fill:#ff006e,stroke:#1de9b6,stroke-width:2px,color:#fff
+            style M2 fill:#ff006e,stroke:#1de9b6,stroke-width:2px,color:#fff
+        </div>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">Dart</span>
           </div>
-        `,
-      },
-      {
-        title: "Fungsi sebagai Parameter",
-        subtitle: "Contoh 1",
-        type: "code",
-        content: `
-          <p>Fungsi dapat menerima fungsi lain sebagai parameter:</p>
-          <pre><code class="language-dart">// Fungsi yang menerima fungsi lain sebagai parameter
-void executeOperation(int a, int b, Function operation) {
-  var result = operation(a, b);
-  print('Hasil: \$result');
-}
-
-// Fungsi-fungsi yang akan digunakan
-int tambah(int x, int y) => x + y;
-int kali(int x, int y) => x * y;
-
-void main() {
-  executeOperation(5, 3, tambah);  // Output: Hasil: 8
-  executeOperation(5, 3, kali);    // Output: Hasil: 15
-}</code></pre>
-          <div class="output-box">
-            <strong>Output:</strong><br>
-            Hasil: 8<br>
-            Hasil: 15
-          </div>
-        `,
-      },
-      {
-        title: "Fungsi Mengembalikan Fungsi",
-        subtitle: "Contoh 2",
-        type: "code",
-        content: `
-          <p>Fungsi dapat mengembalikan fungsi lain:</p>
-          <pre><code class="language-dart">Function createMultiplier(int multiplier) {
-  return (int value) => value * multiplier;
-}
-
-void main() {
-  var kaliDua = createMultiplier(2);
-  var kaliTiga = createMultiplier(3);
-
-  print(kaliDua(5));   // Output: 10
-  print(kaliTiga(5));  // Output: 15
-}</code></pre>
-          <div class="output-box">
-            <strong>Output:</strong><br>
-            10<br>
-            15
-          </div>
-          <div class="tip-box">
-            💡 <strong>Tips:</strong> Pattern ini sangat berguna untuk membuat factory functions!
-          </div>
-        `,
-      },
-      {
-        title: "Higher Order Function pada List",
-        subtitle: "Contoh 3 - map(), where(), forEach()",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">void main() {
-  List<int> angka = [1, 2, 3, 4, 5];
-
-  // map() adalah higher order function
-  var hasilKali2 = angka.map((n) => n * 2).toList();
-  print(hasilKali2);  // Output: [2, 4, 6, 8, 10]
-
-  // where() adalah higher order function untuk filter
-  var angkaGenap = angka.where((n) => n % 2 == 0).toList();
-  print(angkaGenap);  // Output: [2, 4]
-
-  // forEach() adalah higher order function
-  angka.forEach((n) => print('Angka: \$n'));
-}</code></pre>
-          <div class="info-grid">
-            <div class="info-card">
-              <h4>map()</h4>
-              <p>Transform setiap item</p>
-            </div>
-            <div class="info-card">
-              <h4>where()</h4>
-              <p>Filter berdasarkan kondisi</p>
-            </div>
-            <div class="info-card">
-              <h4>forEach()</h4>
-              <p>Iterasi setiap item</p>
-            </div>
-          </div>
-        `,
-      },
-      {
-        title: "Mini Project 1",
-        subtitle: "Sistem Filter Data Mahasiswa",
-        type: "project",
-        content: `
-          <pre><code class="language-dart">class Mahasiswa {
-  String nama;
-  int umur;
-  double ipk;
-
-  Mahasiswa(this.nama, this.umur, this.ipk);
-
-  @override
-  String toString() => '\$nama (Umur: \$umur, IPK: \$ipk)';
-}
-
-List<Mahasiswa> filterMahasiswa(
-  List<Mahasiswa> mahasiswa,
-  bool Function(Mahasiswa) kriteria
-) {
-  return mahasiswa.where(kriteria).toList();
-}
-
-void main() {
-  List<Mahasiswa> daftarMahasiswa = [
-    Mahasiswa('Andi', 20, 3.5),
-    Mahasiswa('Budi', 22, 3.8),
-    Mahasiswa('Citra', 19, 3.2),
-    Mahasiswa('Dewi', 21, 3.9),
-    Mahasiswa('Eko', 23, 3.0),
-  ];
-
-  // Filter mahasiswa dengan IPK >= 3.5
-  var mahasiswaPrestasi = filterMahasiswa(
-    daftarMahasiswa,
-    (m) => m.ipk >= 3.5
-  );
-
-  print('Mahasiswa Berprestasi (IPK >= 3.5):');
-  mahasiswaPrestasi.forEach(print);
-}</code></pre>
-        `,
-      },
-      {
-        title: "Mini Project 2",
-        subtitle: "Kalkulator dengan Custom Operation",
-        type: "project",
-        content: `
-          <pre><code class="language-dart">double kalkulator(double a, double b, 
-    double Function(double, double) operasi) {
-  return operasi(a, b);
-}
-
-void main() {
-  // Definisikan berbagai operasi sebagai anonymous function
-  var tambah = (double x, double y) => x + y;
-  var kurang = (double x, double y) => x - y;
-  var kali = (double x, double y) => x * y;
-  var bagi = (double x, double y) => y != 0 ? x / y : 0;
-  var pangkat = (double x, double y) {
-    double hasil = 1;
-    for (int i = 0; i < y; i++) {
-      hasil *= x;
-    }
-    return hasil;
-  };
-
-  double num1 = 10;
-  double num2 = 5;
-
-  print('\$num1 + \$num2 = \${kalkulator(num1, num2, tambah)}');
-  print('\$num1 - \$num2 = \${kalkulator(num1, num2, kurang)}');
-  print('\$num1 * \$num2 = \${kalkulator(num1, num2, kali)}');
-  print('\$num1 / \$num2 = \${kalkulator(num1, num2, bagi)}');
-  print('\$num1 ^ \$num2 = \${kalkulator(num1, num2, pangkat)}');
-}</code></pre>
-        `,
-      },
-    ],
-  },
-
-  // ==================== MODULE 2: ANONYMOUS FUNCTION ====================
-  anonymousFunction: {
-    title: "Anonymous Function",
-    icon: "🎭",
-    color: "#13B9FD",
-    slides: [
-      {
-        title: "Anonymous Function",
-        subtitle: "Fungsi Tanpa Nama",
-        type: "title",
-        content: `
-          <div class="intro-box">
-            <h3>📖 Apa itu Anonymous Function?</h3>
-            <p>Anonymous Function (fungsi anonim) adalah fungsi yang <strong>tidak memiliki nama</strong>.</p>
-            <p>Disebut juga: <code>lambda function</code> atau <code>closure</code></p>
-            <div class="syntax-box">
-              <h4>Sintaks:</h4>
-              <pre><code class="language-dart">// Full syntax
-(parameter) {
-  // kode fungsi
-}
-
-// Arrow syntax (satu baris)
-(parameter) => ekspresi</code></pre>
-            </div>
-          </div>
-        `,
-      },
-      {
-        title: "Anonymous Function Sederhana",
-        subtitle: "Contoh 1",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">void main() {
-  // Anonymous function disimpan dalam variabel
-  var salam = (String nama) {
-    return 'Halo, \$nama!';
-  };
-
-  print(salam('Budi'));  // Output: Halo, Budi!
-
-  // Versi arrow function (lebih singkat)
-  var salamSingkat = (String nama) => 'Halo, \$nama!';
-  print(salamSingkat('Ani'));  // Output: Halo, Ani!
-}</code></pre>
-          <div class="comparison-box">
-            <div class="compare-item">
-              <h4>Full Syntax</h4>
-              <code>(param) { return value; }</code>
-            </div>
-            <div class="compare-arrow">→</div>
-            <div class="compare-item">
-              <h4>Arrow Syntax</h4>
-              <code>(param) => value</code>
-            </div>
-          </div>
-        `,
-      },
-      {
-        title: "Anonymous Function sebagai Parameter",
-        subtitle: "Contoh 2",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">void main() {
-  List<String> buah = ['Apel', 'Mangga', 'Jeruk'];
-
-  // Menggunakan anonymous function
-  buah.forEach((item) {
-    print('Saya suka \$item');
-  });
-
-  // Versi lebih singkat dengan arrow
-  buah.forEach((item) => print('Saya suka \$item'));
-}</code></pre>
-          <div class="output-box">
-            <strong>Output:</strong><br>
-            Saya suka Apel<br>
-            Saya suka Mangga<br>
-            Saya suka Jeruk
-          </div>
-          <div class="tip-box">
-            💡 Anonymous function sangat umum digunakan sebagai callback!
-          </div>
-        `,
-      },
-      {
-        title: "Multiple Parameter",
-        subtitle: "Contoh 3",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">void main() {
-  var kalkulasi = (int a, int b, String operasi) {
-    switch (operasi) {
-      case '+':
-        return a + b;
-      case '-':
-        return a - b;
-      case '*':
-        return a * b;
-      case '/':
-        return a / b;
-      default:
-        return 0;
-    }
-  };
-
-  print(kalkulasi(10, 5, '+'));  // Output: 15
-  print(kalkulasi(10, 5, '*'));  // Output: 50
-}</code></pre>
-          <div class="output-box">
-            <strong>Output:</strong><br>
-            15<br>
-            50
-          </div>
-        `,
-      },
-      {
-        title: "Mini Project",
-        subtitle: "Text Processor dengan Chain of Operations",
-        type: "project",
-        content: `
-          <pre><code class="language-dart">class TextProcessor {
-  String text;
-
-  TextProcessor(this.text);
-
-  TextProcessor apply(String Function(String) operation) {
-    text = operation(text);
-    return this;
-  }
-
-  String get result => text;
-}
-
-void main() {
-  var toUpperCase = (String s) => s.toUpperCase();
-  var addPrefix = (String s) => '>>> \$s';
-  var addSuffix = (String s) => '\$s <<<';
-
-  String inputText = 'Belajar Dart Itu Menyenangkan';
-
-  var hasil = TextProcessor(inputText)
-      .apply(toUpperCase)
-      .apply(addPrefix)
-      .apply(addSuffix)
-      .result;
+          <div class="code-content">
+<pre><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="type">List</span><span class="keyword">&lt;</span><span class="type">String</span><span class="keyword">&gt;</span> <span class="variable">siswa</span> = [<span class="string">'Budi'</span>, <span class="string">'Siti'</span>, <span class="string">'Budi'</span>]; <span class="comment">// Duplikat diizinkan</span>
   
-  print(hasil);
-  // Output: >>> BELAJAR DART ITU MENYENANGKAN <<<
-}</code></pre>
-        `,
-      },
-    ],
-  },
-
-  // ==================== MODULE 3: SCOPE ====================
-  scope: {
-    title: "Scope",
-    icon: "🔭",
-    color: "#0553B1",
-    slides: [
-      {
-        title: "Scope",
-        subtitle: "Cakupan Variabel",
-        type: "title",
-        content: `
-          <div class="intro-box">
-            <h3>📖 Apa itu Scope?</h3>
-            <p>Scope menentukan di mana suatu variabel dapat <strong>diakses</strong> dalam program.</p>
-            <div class="scope-types">
-              <div class="scope-item global">
-                <h4>🌍 Global Scope</h4>
-                <p>Dapat diakses dari mana saja</p>
-              </div>
-              <div class="scope-item local">
-                <h4>📦 Local Scope</h4>
-                <p>Hanya dalam fungsi tersebut</p>
-              </div>
-              <div class="scope-item block">
-                <h4>🧱 Block Scope</h4>
-                <p>Dalam blok kode (if, for, dll)</p>
-              </div>
-            </div>
+  <span class="comment">// Menambah elemen</span>
+  <span class="variable">siswa</span>.<span class="function">add</span>(<span class="string">'Andi'</span>);
+  
+  <span class="comment">// Mengakses dengan indeks</span>
+  <span class="function">print</span>(<span class="variable">siswa</span>[<span class="number">0</span>]); <span class="comment">// Budi</span>
+  <span class="function">print</span>(<span class="variable">siswa</span>.length); <span class="comment">// 4</span>
+}</pre>
           </div>
-        `,
-      },
-      {
-        title: "Global vs Local Scope",
-        subtitle: "Contoh 1",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">// Global scope
-String namaGlobal = 'Global Variable';
-int umurGlobal = 25;
-
-void tampilkanInfo() {
-  // Local scope
-  String namaLokal = 'Local Variable';
-
-  print(namaGlobal);  // ✅ Bisa akses global
-  print(namaLokal);   // ✅ Bisa akses local
-}
-
-void main() {
-  tampilkanInfo();
-  print(namaGlobal);  // ✅ Bisa akses global
-  // print(namaLokal); // ❌ ERROR! Tidak bisa akses local
-}</code></pre>
-          <div class="rule-box">
-            <h4>⚠️ Aturan Penting:</h4>
-            <ul>
-              <li>Inner scope <strong>dapat</strong> akses outer scope</li>
-              <li>Outer scope <strong>TIDAK dapat</strong> akses inner scope</li>
-            </ul>
+        </div>
+      `
+    },
+    {
+      title: "Set (Koleksi Unik)",
+      category: "Collections",
+      icon: "fas fa-shapes",
+      content: `
+        <p class="text-content">
+          <strong>Set</strong> adalah kumpulan item yang tidak berurutan dan **tidak mengizinkan nilai duplikat**. Semua elemen di dalam Set harus unik. Ditulis menggunakan kurung kurawal <code>{}</code>.
+        </p>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">Dart</span>
           </div>
-        `,
-      },
-      {
-        title: "Block Scope",
-        subtitle: "Contoh 2",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">void main() {
-  int x = 10;  // Scope main
-
-  if (x > 5) {
-    int y = 20;  // Scope if block
-    print('x: \$x');  // ✅ Bisa akses x
-    print('y: \$y');  // ✅ Bisa akses y
-  }
-
-  print('x: \$x');  // ✅ Bisa akses x
-  // print('y: \$y'); // ❌ ERROR! y hanya ada di dalam if
-
-  for (int i = 0; i < 3; i++) {
-    int z = i * 2;  // Scope for block
-    print('z: \$z');
-  }
-
-  // print('i: \$i'); // ❌ ERROR! i hanya ada di dalam for
-}</code></pre>
-        `,
-      },
-      {
-        title: "Variable Shadowing",
-        subtitle: "Contoh 3",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">int angka = 100;  // Global
-
-void main() {
-  print('Global angka: \$angka');  // Output: 100
-
-  int angka = 50;  // Local (shadowing global)
-  print('Local angka: \$angka');   // Output: 50
-
-  {
-    int angka = 25;  // Block scope (shadowing local)
-    print('Block angka: \$angka'); // Output: 25
-  }
-
-  print('Kembali ke local: \$angka');  // Output: 50
-}</code></pre>
-          <div class="warning-box">
-            ⚠️ <strong>Shadowing:</strong> Jika ada nama variabel yang sama, yang lebih <em>inner</em> akan digunakan!
+          <div class="code-content">
+<pre><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="type">Set</span><span class="keyword">&lt;</span><span class="type">String</span><span class="keyword">&gt;</span> <span class="variable">kategori</span> = {<span class="string">'Elektronik'</span>, <span class="string">'Pakaian'</span>, <span class="string">'Elektronik'</span>};
+  
+  <span class="function">print</span>(<span class="variable">kategori</span>); <span class="comment">// Output: {Elektronik, Pakaian} -- duplikat dibuang otomatis!</span>
+  
+  <span class="comment">// Operasi himpunan</span>
+  <span class="type">Set</span><span class="keyword">&lt;</span><span class="type">int</span><span class="keyword">&gt;</span> <span class="variable">a</span> = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>};
+  <span class="type">Set</span><span class="keyword">&lt;</span><span class="type">int</span><span class="keyword">&gt;</span> <span class="variable">b</span> = {<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>};
+  
+  <span class="comment">// Irisan (Intersection)</span>
+  <span class="function">print</span>(<span class="variable">a</span>.<span class="function">intersection</span>(<span class="variable">b</span>)); <span class="comment">// {3}</span>
+}</pre>
           </div>
-        `,
-      },
-      {
-        title: "Closure",
-        subtitle: "Contoh 4 - Anonymous Function dengan Scope",
-        type: "code",
-        content: `
-          <pre><code class="language-dart">Function createCounter() {
-  int count = 0;  // Variabel ini "ditangkap" oleh closure
-
-  return () {
-    count++;
-    return count;
+        </div>
+      `
+    }
+  ],
+  mapqueue: [
+    {
+      title: "Map (Key-Value Pairs)",
+      category: "Collections",
+      icon: "fas fa-atlas",
+      content: `
+        <p class="text-content">
+          <strong>Map</strong> menyimpan data berpasangan antara kunci (Key) dan nilai (Value). Kunci pada Map bersifat unik, sedangkan nilainya boleh duplikat.
+        </p>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">Dart</span>
+          </div>
+          <div class="code-content">
+<pre><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// Deklarasi Map</span>
+  <span class="type">Map</span><span class="keyword">&lt;</span><span class="type">String</span>, <span class="type">String</span><span class="keyword">&gt;</span> <span class="variable">ibukota</span> = {
+    <span class="string">'Indonesia'</span>: <span class="string">'Jakarta'</span>,
+    <span class="string">'Jepang'</span>: <span class="string">'Tokyo'</span>,
   };
-}
-
-void main() {
-  var counter1 = createCounter();
-  var counter2 = createCounter();
-
-  print(counter1());  // Output: 1
-  print(counter1());  // Output: 2
-  print(counter1());  // Output: 3
-
-  print(counter2());  // Output: 1 (counter terpisah!)
-  print(counter2());  // Output: 2
-}</code></pre>
-          <div class="tip-box">
-            💡 <strong>Closure</strong> = anonymous function yang "mengingat" variabel dari scope luarnya!
+  
+  <span class="comment">// Menambah data baru</span>
+  <span class="variable">ibukota</span>[<span class="string">'Malaysia'</span>] = <span class="string">'Kuala Lumpur'</span>;
+  
+  <span class="comment">// Mengakses data</span>
+  <span class="function">print</span>(<span class="variable">ibukota</span>[<span class="string">'Indonesia'</span>]); <span class="comment">// Jakarta</span>
+}</pre>
           </div>
-        `,
-      },
-      {
-        title: "Mini Project",
-        subtitle: "Shopping Cart dengan Scope Management",
-        type: "project",
-        content: `
-          <pre><code class="language-dart">class ShoppingCart {
-  List<Map<String, dynamic>> _items = [];
-  double _diskon = 0;
-
-  void addItem(String nama, int jumlah, double harga) {
-    _items.add({'nama': nama, 'jumlah': jumlah, 'harga': harga});
-    print('✓ Ditambahkan: \$nama x\$jumlah');
-  }
-
-  void setDiskon(double persen) {
-    _diskon = persen;
-  }
-
-  Function get hitungTotal {
-    return () {
-      double subtotal = 0;
-      _items.forEach((item) {
-        subtotal += item['jumlah'] * item['harga'];
-      });
-      double diskonAmount = subtotal * (_diskon / 100);
-      return {'subtotal': subtotal, 'diskon': diskonAmount,
-              'total': subtotal - diskonAmount};
-    };
-  }
-}
-
-void main() {
-  var cart = ShoppingCart();
-  cart.addItem('Buku Dart', 2, 50000);
-  cart.addItem('Laptop', 1, 5000000);
-  cart.setDiskon(10);
-  print(cart.hitungTotal()); // {subtotal: 5100000, ...}
-}</code></pre>
-        `,
-      },
-    ],
-  },
-
-  // ==================== TUGAS RUMAH ====================
-  tugasRumah: {
-    title: "Tugas Rumah",
-    icon: "📝",
-    color: "#6C63FF",
-    slides: [
-      {
-        title: "Tugas 1",
-        subtitle: "Sistem Penilaian Ujian",
-        type: "homework",
-        content: `
-          <div class="task-box">
-            <h3>📝 Deskripsi Tugas</h3>
-            <p>Buat program sistem penilaian dengan fitur:</p>
-            <ul>
-              <li>Input daftar nilai siswa</li>
-              <li>Filter siswa berdasarkan status kelulusan (nilai >= 75)</li>
-              <li>Hitung rata-rata nilai</li>
-              <li>Cari nilai tertinggi dan terendah</li>
-              <li>Gunakan higher order function dan anonymous function</li>
-            </ul>
+        </div>
+      `
+    },
+    {
+      title: "Queue (Koleksi Antrean)",
+      category: "Collections",
+      icon: "fas fa-align-justify",
+      content: `
+        <p class="text-content">
+          <strong>Queue</strong> adalah antrean data di mana manipulasi data di awal atau akhir antrean berlangsung sangat cepat. Untuk menggunakannya, import pustaka <code>dart:collection</code>.
+        </p>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">Dart</span>
           </div>
-          <pre><code class="language-dart">class Siswa {
-  String nama;
-  double nilai;
-  // ... tambahkan constructor dan method
-}
+          <div class="code-content">
+<pre><span class="keyword">import</span> <span class="string">'dart:collection'</span>;
 
-void main() {
-  List<Siswa> daftarSiswa = [
-    // ... isi dengan data siswa
+<span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="type">Queue</span><span class="keyword">&lt;</span><span class="type">int</span><span class="keyword">&gt;</span> <span class="variable">antrean</span> = <span class="type">Queue</span>();
+  
+  <span class="variable">antrean</span>.<span class="function">addLast</span>(<span class="number">10</span>);
+  <span class="variable">antrean</span>.<span class="function">addLast</span>(<span class="number">20</span>);
+  <span class="variable">antrean</span>.<span class="function">addFirst</span>(<span class="number">5</span>); <span class="comment">// Ditambah di paling depan</span>
+  
+  <span class="function">print</span>(<span class="variable">antrean</span>); <span class="comment">// {5, 10, 20}</span>
+  
+  <span class="variable">antrean</span>.<span class="function">removeFirst</span>(); <span class="comment">// Menghapus elemen terdepan</span>
+  <span class="function">print</span>(<span class="variable">antrean</span>); <span class="comment">// {10, 20}</span>
+}</pre>
+          </div>
+        </div>
+      `
+    }
+  ],
+  modern: [
+    {
+      title: "Spread Operator & Collection Control Flow",
+      category: "Advanced Collections",
+      icon: "fas fa-magic",
+      content: `
+        <p class="text-content">
+          Dart menyediakan fitur modern yang sangat mempermudah manipulasi dan penggabungan collection:
+        </p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-icon">...</div>
+            <div class="feature-text">
+              <h4>Spread Operator</h4>
+              <p>Menyisipkan semua elemen dari suatu list ke list lain. Gunakan <code>...?</code> untuk mencegah error jika list bernilai null.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">if</div>
+            <div class="feature-text">
+              <h4>Collection-If</h4>
+              <p>Menyisipkan elemen ke dalam list secara kondisional langsung saat inisialisasi.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">for</div>
+            <div class="feature-text">
+              <h4>Collection-For</h4>
+              <p>Melakukan perulangan langsung di dalam pendefinisian list untuk membuat data baru.</p>
+            </div>
+          </div>
+        </div>
+      `
+    },
+    {
+      title: "Praktik Fitur Modern Collection",
+      category: "Advanced Collections",
+      icon: "fas fa-code",
+      content: `
+        <p class="text-content">
+          Mari lihat bagaimana fitur-fitur ini menghemat penulisan kode di Dart:
+        </p>
+        <div class="code-block">
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">Dart</span>
+          </div>
+          <div class="code-content">
+<pre><span class="keyword">void</span> <span class="function">main</span>() {
+  <span class="comment">// 1. Spread Operator</span>
+  <span class="type">List</span><span class="keyword">&lt;</span><span class="type">int</span><span class="keyword">&gt;</span> <span class="variable">listA</span> = [<span class="number">1</span>, <span class="number">2</span>];
+  <span class="type">List</span><span class="keyword">&lt;</span><span class="type">int</span><span class="keyword">&gt;</span> <span class="variable">gabungan</span> = [<span class="number">0</span>, ...<span class="variable">listA</span>, <span class="number">3</span>, <span class="number">4</span>]; <span class="comment">// [0, 1, 2, 3, 4]</span>
+  
+  <span class="comment">// 2. Collection-If</span>
+  <span class="type">bool</span> <span class="variable">admin</span> = <span class="keyword">true</span>;
+  <span class="type">List</span><span class="keyword">&lt;</span><span class="type">String</span><span class="keyword">&gt;</span> <span class="variable">menu</span> = [
+    <span class="string">'Home'</span>,
+    <span class="string">'Profile'</span>,
+    <span class="keyword">if</span> (<span class="variable">admin</span>) <span class="string">'Dashboard Admin'</span>
   ];
-
-  // Gunakan where() untuk filter
-  // Gunakan reduce() atau fold() untuk perhitungan
-  // Buat anonymous function untuk setiap operasi
-}</code></pre>
-        `,
-      },
-      {
-        title: "Tugas 2",
-        subtitle: "Todo List Manager dengan Priority",
-        type: "homework",
-        content: `
-          <div class="task-box">
-            <h3>📝 Deskripsi Tugas</h3>
-            <p>Buat aplikasi todo list dengan fitur:</p>
-            <ul>
-              <li>Tambah task dengan priority (tinggi, sedang, rendah)</li>
-              <li>Filter task berdasarkan priority</li>
-              <li>Sort task berdasarkan priority atau deadline</li>
-              <li>Mark task sebagai selesai</li>
-              <li>Gunakan closure untuk menyimpan state internal</li>
-            </ul>
+  
+  <span class="comment">// 3. Collection-For</span>
+  <span class="type">List</span><span class="keyword">&lt;</span><span class="type">int</span><span class="keyword">&gt;</span> <span class="variable">angkaBiasa</span> = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+  <span class="type">List</span><span class="keyword">&lt;</span><span class="type">String</span><span class="keyword">&gt;</span> <span class="variable">formatTeks</span> = [
+    <span class="string">'Angka nol'</span>,
+    <span class="keyword">for</span> (<span class="keyword">var</span> <span class="variable">x</span> <span class="keyword">in</span> <span class="variable">angkaBiasa</span>) <span class="string">'Angka </span><span class="variable">$x</span><span class="string">'</span>
+  ];
+  
+  <span class="function">print</span>(<span class="variable">gabungan</span>);
+  <span class="function">print</span>(<span class="variable">menu</span>);
+  <span class="function">print</span>(<span class="variable">formatTeks</span>);
+}</pre>
           </div>
-          <pre><code class="language-dart">class Task {
-  String judul;
-  String priority; // 'tinggi', 'sedang', 'rendah'
-  bool selesai;
-  DateTime? deadline;
-}
-
-class TodoManager {
-  List<Task> _tasks = [];
-
-  void tambahTask(Task task) { /* ... */ }
-
-  List<Task> filterByPriority(String priority) {
-    // Gunakan where dengan anonymous function
-  }
-
-  Function get sortByPriority {
-    // Return anonymous function untuk sorting
-  }
-}</code></pre>
-        `,
-      },
-      {
-        title: "Tugas 3",
-        subtitle: "String Validator Builder",
-        type: "homework",
-        content: `
-          <div class="task-box">
-            <h3>📝 Deskripsi Tugas</h3>
-            <p>Buat sistem validasi string yang fleksibel:</p>
-            <ul>
-              <li>Cek panjang minimum dan maksimum</li>
-              <li>Cek apakah mengandung angka</li>
-              <li>Cek apakah mengandung huruf kapital</li>
-              <li>Cek apakah mengandung karakter spesial</li>
-              <li>Bisa menggabungkan multiple validasi</li>
-            </ul>
-          </div>
-          <pre><code class="language-dart">typedef Validator = bool Function(String);
-
-class StringValidatorBuilder {
-  List<Validator> _validators = [];
-
-  StringValidatorBuilder minLength(int length) {
-    _validators.add((s) => s.length >= length);
-    return this;
-  }
-
-  StringValidatorBuilder hasNumber() {
-    // Tambahkan validator untuk cek angka
-    return this;
-  }
-
-  bool validate(String input) {
-    // Jalankan semua validator
-  }
-}
-
-void main() {
-  var passwordValidator = StringValidatorBuilder()
-      .minLength(8)
-      .hasNumber()
-      .hasUpperCase();
-
-  print(passwordValidator.validate('Password123')); // true
-}</code></pre>
-        `,
-      },
-      {
-        title: "Tugas 4",
-        subtitle: "Data Transformation Pipeline",
-        type: "homework",
-        content: `
-          <div class="task-box">
-            <h3>📝 Deskripsi Tugas</h3>
-            <p>Buat sistem pipeline untuk transformasi data:</p>
-            <ul>
-              <li>Membaca list data mentah</li>
-              <li>Melakukan transformasi bertahap (map, filter, sort)</li>
-              <li>Setiap transformasi adalah function yang bisa di-chain</li>
-              <li>Gunakan scope untuk menyimpan intermediate results</li>
-              <li>Output hasil transformasi dalam format yang rapi</li>
-            </ul>
-          </div>
-          <div class="tip-box">
-            💡 <strong>Hints:</strong>
-            <ul>
-              <li>Buat class <code>Pipeline</code> dengan method chaining</li>
-              <li>Gunakan <code>List.map()</code>, <code>List.where()</code>, <code>List.sort()</code></li>
-              <li>Store intermediate results dalam private variables</li>
-              <li>Implement <code>toString()</code> untuk output yang rapi</li>
-            </ul>
-          </div>
-        `,
-      },
-    ],
-  },
-
-  // ==================== KESIMPULAN ====================
-  kesimpulan: {
-    title: "Kesimpulan",
-    icon: "📌",
-    color: "#FF6B6B",
-    slides: [
-      {
-        title: "Kesimpulan",
-        subtitle: "Ringkasan Materi",
-        type: "summary",
-        content: `
-          <div class="summary-grid">
-            <div class="summary-card hof">
-              <div class="icon">🚀</div>
-              <h3>Higher Order Function</h3>
-              <p>Fungsi yang dapat menerima atau mengembalikan fungsi lain.</p>
-              <p class="benefit">✨ Membuat kode lebih fleksibel dan reusable</p>
-            </div>
-            <div class="summary-card anon">
-              <div class="icon">🎭</div>
-              <h3>Anonymous Function</h3>
-              <p>Fungsi tanpa nama yang berguna untuk operasi sekali pakai.</p>
-              <p class="benefit">✨ Ideal sebagai parameter untuk HOF</p>
-            </div>
-            <div class="summary-card scope">
-              <div class="icon">🔭</div>
-              <h3>Scope</h3>
-              <p>Menentukan aksesibilitas variabel dalam program.</p>
-              <p class="benefit">✨ Pahami global, local, dan block scope</p>
-            </div>
-          </div>
-          <div class="final-message">
-            <h3>🎉 Selamat!</h3>
-            <p>Anda telah mempelajari konsep-konsep penting dalam pemrograman functional di Dart!</p>
-          </div>
-        `,
-      },
-    ],
-  },
+        </div>
+      `
+    }
+  ],
+  tugas: [
+    {
+      title: "Latihan & Tugas Mandiri Bab 8",
+      category: "Tugas",
+      icon: "fas fa-edit",
+      content: `
+        <p class="text-content">
+          Kerjakan latihan di bawah ini untuk melatih pemahaman Anda tentang manipulasi data collections:
+        </p>
+        <div class="info-box warning">
+          <div class="info-box-title"><i class="fas fa-tasks"></i> Project: Sistem Manajemen Keranjang Belanja</div>
+          <p>Tulis program Dart yang melakukan operasi-operasi berikut:</p>
+          <ul>
+            <li>Buat sebuah list belanjaan bertipe Map berisi nama barang dan harga, contoh: <code>List&lt;Map&lt;String, dynamic&gt;&gt; keranjang = [];</code></li>
+            <li>Tambahkan minimal 3 barang ke dalam keranjang.</li>
+            <li>Gunakan loop <code>for-in</code> untuk mengiterasi keranjang belanja, mencetak semua nama barang, dan menjumlahkan total harga belanjaan tersebut.</li>
+            <li>Buat daftar diskon bertipe <code>Set</code> yang berisi item unik yang sedang diskon. Cek apakah barang di keranjang termasuk dalam Set diskon, jika ya, potong harganya sebesar 10% sebelum ditotalkan.</li>
+          </ul>
+        </div>
+      `
+    }
+  ]
 };
-
-// Export for use
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = slidesData;
-}

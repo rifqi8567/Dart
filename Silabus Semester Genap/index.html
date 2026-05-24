@@ -5,420 +5,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silabus Dart Kelas 10B - Semester Genap</title>
     <link rel="icon" type="image/png" href="../Dart1.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
+    <!-- Google Fonts Poppins -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap"
       rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
   <body>
-    <main class="page">
-      <a class="back-link" href="../index.html">Kembali ke Portal</a>
+    <!-- BACKGROUND DECORATIONS -->
+    <div class="background-decor">
+      <div class="bg-radial"></div>
+      <div class="particles-decor"></div>
+      <div class="blob-decor"></div>
+      <div class="blob-decor"></div>
+      <div class="grid-decor"></div>
+    </div>
 
+    <!-- MAIN PAGE CONTAINER -->
+    <main class="page">
+      <!-- Floating decorative Dart icons as background ornaments -->
+      <div class="floating-shapes">
+        <div class="shape shape-1"><img src="../Dart1.png" alt="Dart Deco 1" /></div>
+        <div class="shape shape-2"><img src="../Dart1.png" alt="Dart Deco 2" /></div>
+        <div class="shape shape-3"><img src="../Dart1.png" alt="Dart Deco 3" /></div>
+        <div class="shape shape-4"><img src="../Dart1.png" alt="Dart Deco 4" /></div>
+        <div class="shape shape-5"><img src="../Dart1.png" alt="Dart Deco 5" /></div>
+        <div class="shape shape-6"><img src="../Dart1.png" alt="Dart Deco 6" /></div>
+      </div>
+
+      <!-- Back to Portal Button -->
+      <a class="back-link" href="../index.html">
+        <i class="fas fa-arrow-left"></i> Kembali ke Portal
+      </a>
+
+      <!-- HERO HEADER -->
       <header class="hero">
-        <img src="../Dart1.png" alt="Logo Dart" class="logo" />
+        <div class="logo-3d-container">
+          <div class="logo-3d-scene">
+            <div class="logo-3d-card">
+              <div class="logo-3d-face face-front">
+                <img src="../Dart1.png" alt="Dart Front" />
+              </div>
+              <div class="logo-3d-face face-back">
+                <img src="../Dart1.png" alt="Dart Back" style="transform: rotateY(180deg);" />
+              </div>
+              <div class="logo-3d-ring"></div>
+              <div class="logo-3d-ring ring-vertical"></div>
+            </div>
+          </div>
+        </div>
         <div>
-          <p class="eyebrow">Silabus Pembelajaran</p>
-          <h1>Dart Programming Kelas 10B</h1>
+          <p class="eyebrow">Silabus Pembelajaran Semester Genap</p>
+          <h1>Pemrograman Dart Kelas 10B</h1>
           <p class="lead">
-            Silabus semester genap berbentuk tabel standar. Materi Dart dibagi
-            menjadi 32 pertemuan agar setiap bab memiliki waktu penjelasan,
-            latihan, penguatan, dan evaluasi praktik.
+            Rencana pembelajaran terstruktur berbasis kurikulum standar industri (Google/Dicoding) 
+            dan Kemendikbud. Terbagi menjadi 32 pertemuan dengan pengajaran bertahap, 
+            contoh-contoh kode terapan, latihan kelas, dan proyek akhir mandiri.
           </p>
         </div>
       </header>
 
-      <section class="identity-grid" aria-label="Identitas silabus">
-        <article>
-          <span>Satuan Pendidikan</span>
-          <strong>Madrasah/Sekolah</strong>
+      <!-- STATISTIK DASHBOARD -->
+      <section class="stats-grid" aria-label="Statistik Belajar">
+        <article class="stat-card">
+          <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="stat-info">
+            <span>Total Pertemuan</span>
+            <strong id="stat-meetings">32</strong>
+          </div>
         </article>
-        <article>
-          <span>Mata Pelajaran</span>
-          <strong>Pemrograman Dart</strong>
+        <article class="stat-card">
+          <div class="stat-icon"><i class="fas fa-book-open"></i></div>
+          <div class="stat-info">
+            <span>Cakupan Kurikulum</span>
+            <strong id="stat-chapters">15 Bab</strong>
+          </div>
         </article>
-        <article>
-          <span>Kelas/Semester</span>
-          <strong>10B / Genap</strong>
-        </article>
-        <article>
-          <span>Pengajar</span>
-          <strong>Ustadz Muhammad Reifqi Thufail Fahmi</strong>
+        <article class="stat-card">
+          <div class="stat-icon"><i class="fas fa-hourglass-half"></i></div>
+          <div class="stat-info">
+            <span>Alokasi Waktu</span>
+            <strong id="stat-jp">64 JP</strong>
+          </div>
         </article>
       </section>
 
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Tujuan Umum</p>
-          <h2>Capaian Pembelajaran Semester</h2>
+      <!-- CONTROLS & FILTER -->
+      <section class="dashboard-controls" aria-label="Pencarian dan Filter">
+        <!-- Search bar -->
+        <div class="search-box-container">
+          <i class="fas fa-search"></i>
+          <input 
+            type="text" 
+            id="search-meeting" 
+            class="search-input" 
+            placeholder="Cari topik pembelajaran, kompetensi, kata kunci (misal: OOP, List, null)..." 
+          />
         </div>
-        <div class="outcomes">
-          <div>Peserta didik memahami konsep dasar bahasa Dart dan alur kerja program.</div>
-          <div>Peserta didik mampu memakai variabel, tipe data, operator, dan struktur kontrol.</div>
-          <div>Peserta didik mampu membuat function dasar dan function lanjutan secara rapi.</div>
-          <div>Peserta didik mampu menerapkan null safety, ternary, asynchronous, dan closure.</div>
-          <div>Peserta didik mampu menyelesaikan project sederhana berbasis Dart.</div>
+        
+        <!-- Filter chips -->
+        <div class="filter-wrapper">
+          <span class="filter-label">Filter Kategori:</span>
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="fundamental">Dasar (Bab 1-5)</button>
+          <button class="filter-btn" data-filter="intermediate">Menengah (Bab 6-10)</button>
+          <button class="filter-btn" data-filter="oop">OOP (Bab 11-13)</button>
+          <button class="filter-btn" data-filter="advanced">Lanjutan (Bab 14-15)</button>
+          <button class="filter-btn" data-filter="other">Evaluasi/Project</button>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Format Silabus</p>
-          <h2>Rencana Pembelajaran 32 Pertemuan</h2>
-        </div>
+      <!-- TAB CONTROLS -->
+      <nav class="tab-controls" aria-label="Navigasi Tampilan">
+        <button class="tab-btn active" data-tab="timeline">
+          <i class="fas fa-route"></i> Peta Alur Belajar
+        </button>
+        <button class="tab-btn" data-tab="table">
+          <i class="fas fa-table"></i> Matriks Tabel Detail
+        </button>
+        <button class="tab-btn" data-tab="stats">
+          <i class="fas fa-award"></i> Kriteria &amp; Capaian
+        </button>
+      </nav>
 
+      <!-- TAB CONTENTS -->
+      <!-- Tab 1: Timeline -->
+      <section id="timeline-tab" class="tab-content active" aria-label="Tampilan Peta Alur Belajar">
+        <div class="timeline-container">
+          <!-- Dynamic rendered content from script.js -->
+        </div>
+      </section>
+
+      <!-- Tab 2: Table -->
+      <section id="table-tab" class="tab-content" aria-label="Tampilan Tabel Detail">
         <div class="table-wrap">
           <table class="syllabus-table">
             <thead>
               <tr>
-                <th>No.</th>
-                <th>Pertemuan</th>
-                <th>Kompetensi/Tujuan Pembelajaran</th>
-                <th>Materi Pokok</th>
-                <th>Kegiatan Pembelajaran</th>
-                <th>Penilaian</th>
-                <th>Alokasi Waktu</th>
-                <th>Sumber Belajar</th>
+                <th style="width: 60px;" class="text-center">No</th>
+                <th style="width: 250px;">Materi Pokok</th>
+                <th>Tujuan / Kompetensi Pembelajaran</th>
+                <th class="hidden-mobile">Aktivitas Pembelajaran</th>
+                <th class="hidden-mobile">Penilaian</th>
+                <th style="width: 90px;" class="text-center">Waktu</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>1</td>
-                <td>Memahami aturan kelas, target semester, dan cara belajar coding.</td>
-                <td>Orientasi kelas, kontrak belajar, pengenalan Dart Masterclass.</td>
-                <td>Diskusi, demo portal, pengenalan cara membuka materi dan latihan.</td>
-                <td>Observasi keaktifan.</td>
-                <td>2 JP</td>
-                <td>Portal utama, README.</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>2</td>
-                <td>Menjelaskan pengertian Dart dan alasan mempelajarinya.</td>
-                <td>Bab 1: Apa itu Dart, ekosistem, use case.</td>
-                <td>Pemaparan, tanya jawab, identifikasi contoh aplikasi berbasis Dart/Flutter.</td>
-                <td>Tanya jawab lisan.</td>
-                <td>2 JP</td>
-                <td>Bab 1, dart.dev.</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>3</td>
-                <td>Memahami sejarah Dart dan perkembangan fitur modern.</td>
-                <td>Bab 1: Sejarah Dart, Dart SDK, DartPad, tools editor.</td>
-                <td>Membaca timeline, demo DartPad, menulis catatan konsep penting.</td>
-                <td>Catatan belajar.</td>
-                <td>2 JP</td>
-                <td>Bab 1, DartPad.</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>4</td>
-                <td>Menjalankan program Dart sederhana.</td>
-                <td>Bab 1: Program pertama, print, main function.</td>
-                <td>Praktik menulis dan menjalankan program hello world serta variasinya.</td>
-                <td>Praktik individu.</td>
-                <td>2 JP</td>
-                <td>Bab 1, editor/DartPad.</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>5</td>
-                <td>Membedakan variabel, konstanta, dan tipe data dasar.</td>
-                <td>Bab 2: var, final, const, int, double, String, bool.</td>
-                <td>Penjelasan konsep, contoh kode, latihan deklarasi data diri.</td>
-                <td>Latihan tertulis dan praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 2.</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>6</td>
-                <td>Menggunakan type inference dan dynamic secara tepat.</td>
-                <td>Bab 2: Type inference, dynamic, kesalahan tipe data.</td>
-                <td>Analisis contoh benar/salah, debugging sederhana.</td>
-                <td>Kuis singkat.</td>
-                <td>2 JP</td>
-                <td>Bab 2.</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>7</td>
-                <td>Mengolah data sederhana memakai variabel dan tipe data.</td>
-                <td>Bab 2: Mini latihan profil siswa dan perhitungan dasar.</td>
-                <td>Praktik membuat output biodata dan perhitungan nilai.</td>
-                <td>Produk kode sederhana.</td>
-                <td>2 JP</td>
-                <td>Bab 2, DartPad.</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>8</td>
-                <td>Memahami struktur dasar program Dart.</td>
-                <td>Bab 3: Struktur file, main function, komentar.</td>
-                <td>Menandai bagian program, latihan komentar single-line dan multi-line.</td>
-                <td>Penugasan kecil.</td>
-                <td>2 JP</td>
-                <td>Bab 3.</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>9</td>
-                <td>Menggunakan import, library, dan top-level function sederhana.</td>
-                <td>Bab 3: Import, library, top-level function.</td>
-                <td>Demo penggunaan library bawaan dan pemecahan fungsi sederhana.</td>
-                <td>Praktik terarah.</td>
-                <td>2 JP</td>
-                <td>Bab 3, dokumentasi Dart.</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>10</td>
-                <td>Menulis program dengan struktur yang rapi dan mudah dibaca.</td>
-                <td>Bab 3: Format kode, penamaan variabel, kebiasaan clean code.</td>
-                <td>Refactor contoh kode berantakan menjadi lebih rapi.</td>
-                <td>Review kode.</td>
-                <td>2 JP</td>
-                <td>Bab 3.</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>11</td>
-                <td>Menggunakan operator aritmatika dan assignment.</td>
-                <td>Bab 4: +, -, *, /, %, ~/ dan assignment.</td>
-                <td>Latihan operasi angka dan simulasi kasir sederhana.</td>
-                <td>Latihan praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 4.</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>12</td>
-                <td>Menggunakan operator perbandingan dan logika.</td>
-                <td>Bab 4: ==, !=, >, <, >=, <=, &&, ||, !.</td>
-                <td>Studi kasus validasi nilai, umur, dan status kelulusan.</td>
-                <td>Kuis dan praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 4.</td>
-              </tr>
-              <tr>
-                <td>13</td>
-                <td>13</td>
-                <td>Menerapkan operator dalam program kecil.</td>
-                <td>Bab 4: Latihan kalkulator dan konversi satuan.</td>
-                <td>Praktik mandiri dengan pendampingan debugging.</td>
-                <td>Produk program.</td>
-                <td>2 JP</td>
-                <td>Bab 4, DartPad.</td>
-              </tr>
-              <tr>
-                <td>14</td>
-                <td>14</td>
-                <td>Menggunakan percabangan if-else untuk pengambilan keputusan.</td>
-                <td>Bab 5: If, else if, else.</td>
-                <td>Latihan menentukan grade nilai dan kategori input.</td>
-                <td>Praktik individu.</td>
-                <td>2 JP</td>
-                <td>Bab 5.</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>15</td>
-                <td>Menggunakan switch-case untuk pilihan program.</td>
-                <td>Bab 5: Switch-case, break, default.</td>
-                <td>Membuat menu sederhana dan membandingkan dengan if-else.</td>
-                <td>Latihan kode.</td>
-                <td>2 JP</td>
-                <td>Bab 5.</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>16</td>
-                <td>Menggunakan perulangan for, while, dan do-while.</td>
-                <td>Bab 5: Loop, break, continue.</td>
-                <td>Latihan tabel perkalian, hitung total, dan pola angka.</td>
-                <td>Praktik terstruktur.</td>
-                <td>2 JP</td>
-                <td>Bab 5.</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>17</td>
-                <td>Menggabungkan variabel, operator, dan control flow.</td>
-                <td>Review Bab 1-5 dan latihan terpadu.</td>
-                <td>Pemecahan soal bertahap, diskusi error umum, pembahasan solusi.</td>
-                <td>Latihan terpadu.</td>
-                <td>2 JP</td>
-                <td>Bab 1-5.</td>
-              </tr>
-              <tr>
-                <td>18</td>
-                <td>18</td>
-                <td>Mengukur pemahaman dasar pemrograman Dart.</td>
-                <td>Penilaian Tengah Semester.</td>
-                <td>Ujian teori singkat dan praktik membuat program kecil.</td>
-                <td>PTS teori dan praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 1-5.</td>
-              </tr>
-              <tr>
-                <td>19</td>
-                <td>19</td>
-                <td>Memahami fungsi sebagai blok kode yang dapat digunakan ulang.</td>
-                <td>Bab 6: Deklarasi function dan return value.</td>
-                <td>Demo function, latihan memecah program menjadi beberapa fungsi.</td>
-                <td>Praktik individu.</td>
-                <td>2 JP</td>
-                <td>Bab 6.</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>20</td>
-                <td>Menggunakan parameter positional, named, dan optional.</td>
-                <td>Bab 6: Parameter function.</td>
-                <td>Latihan function untuk hitung nilai, diskon, dan biodata.</td>
-                <td>Latihan kode.</td>
-                <td>2 JP</td>
-                <td>Bab 6.</td>
-              </tr>
-              <tr>
-                <td>21</td>
-                <td>21</td>
-                <td>Menerapkan function dalam mini project sederhana.</td>
-                <td>Bab 6: Mini project function dasar.</td>
-                <td>Membuat kumpulan function kalkulator dan validator input.</td>
-                <td>Produk mini project.</td>
-                <td>2 JP</td>
-                <td>Bab 6, DartPad.</td>
-              </tr>
-              <tr>
-                <td>22</td>
-                <td>22</td>
-                <td>Menggunakan arrow function dan inner function.</td>
-                <td>Bab 7: Short expression dan inner function.</td>
-                <td>Mengubah function biasa menjadi arrow function dan membuat nested helper.</td>
-                <td>Praktik terarah.</td>
-                <td>2 JP</td>
-                <td>Bab 7.</td>
-              </tr>
-              <tr>
-                <td>23</td>
-                <td>23</td>
-                <td>Memahami function sebagai first-class citizen dan callback.</td>
-                <td>Bab 7: Callback, function sebagai parameter.</td>
-                <td>Latihan custom operation dan filter data sederhana.</td>
-                <td>Kuis praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 7.</td>
-              </tr>
-              <tr>
-                <td>24</td>
-                <td>24</td>
-                <td>Menerapkan function lanjutan dalam project kecil.</td>
-                <td>Bab 7: Mini project text processor atau shopping cart.</td>
-                <td>Praktik berpasangan, review hasil, perbaikan struktur kode.</td>
-                <td>Produk dan presentasi singkat.</td>
-                <td>2 JP</td>
-                <td>Bab 7.</td>
-              </tr>
-              <tr>
-                <td>25</td>
-                <td>25</td>
-                <td>Memahami null dan risiko error pada program.</td>
-                <td>Bab 8: Null, nullable type, non-nullable type.</td>
-                <td>Analisis contoh error, latihan variabel nullable dan non-nullable.</td>
-                <td>Latihan kode.</td>
-                <td>2 JP</td>
-                <td>Bab 8.</td>
-              </tr>
-              <tr>
-                <td>26</td>
-                <td>26</td>
-                <td>Menggunakan null-aware operator dan ternary operator.</td>
-                <td>Bab 8: ??, ?., !, ternary operator.</td>
-                <td>Membuat validasi data user dan output default.</td>
-                <td>Praktik individu.</td>
-                <td>2 JP</td>
-                <td>Bab 8.</td>
-              </tr>
-              <tr>
-                <td>27</td>
-                <td>27</td>
-                <td>Menggunakan asynchronous programming dasar.</td>
-                <td>Bab 9: Future, async, await.</td>
-                <td>Demo simulasi fetch data, delay, dan urutan eksekusi program.</td>
-                <td>Observasi dan latihan.</td>
-                <td>2 JP</td>
-                <td>Bab 9.</td>
-              </tr>
-              <tr>
-                <td>28</td>
-                <td>28</td>
-                <td>Memahami anonymous function dan higher order function.</td>
-                <td>Bab 9: Anonymous function, map, where, forEach.</td>
-                <td>Latihan transformasi list data siswa dan filter nilai.</td>
-                <td>Latihan praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 9.</td>
-              </tr>
-              <tr>
-                <td>29</td>
-                <td>29</td>
-                <td>Memahami scope, closure, dan rekursi secara dasar.</td>
-                <td>Bab 9: Scope, closure, recursive function.</td>
-                <td>Demo counter dengan closure dan contoh rekursi faktorial.</td>
-                <td>Kuis praktik.</td>
-                <td>2 JP</td>
-                <td>Bab 9.</td>
-              </tr>
-              <tr>
-                <td>30</td>
-                <td>30</td>
-                <td>Merancang project akhir berbasis materi semester genap.</td>
-                <td>Project akhir: kalkulator pintar, sistem nilai, todo list, atau validator.</td>
-                <td>Pembentukan kelompok/individu, pemilihan project, rancangan fitur.</td>
-                <td>Proposal project.</td>
-                <td>2 JP</td>
-                <td>Bab 1-9.</td>
-              </tr>
-              <tr>
-                <td>31</td>
-                <td>31</td>
-                <td>Mengembangkan dan memperbaiki project akhir.</td>
-                <td>Implementasi project dan debugging.</td>
-                <td>Praktik coding, konsultasi, review bug, dan penyempurnaan output.</td>
-                <td>Progress project.</td>
-                <td>2 JP</td>
-                <td>Bab 1-9, DartPad/editor.</td>
-              </tr>
-              <tr>
-                <td>32</td>
-                <td>32</td>
-                <td>Mempresentasikan hasil belajar dan project akhir.</td>
-                <td>Review akhir, presentasi project, Penilaian Akhir Semester.</td>
-                <td>Demo project, refleksi pembelajaran, evaluasi teori dan praktik.</td>
-                <td>PAS dan project akhir.</td>
-                <td>2 JP</td>
-                <td>Seluruh materi.</td>
-              </tr>
+              <!-- Dynamic rendered rows from script.js -->
             </tbody>
           </table>
         </div>
       </section>
 
-      <section class="section assessment">
-        <div class="section-heading">
-          <p class="eyebrow">Penilaian</p>
-          <h2>Komponen Nilai</h2>
+      <!-- Tab 3: Kriteria & Capaian -->
+      <section id="stats-tab" class="tab-content" aria-label="Kriteria Penilaian dan Capaian Belajar">
+        <div class="section-heading" style="margin-bottom: 25px;">
+          <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 8px;">Bobot Penilaian Semester</h2>
+          <p style="color: var(--muted); font-size: 0.95rem;">Evaluasi penilaian akhir siswa dirancang adil dan komprehensif berdasarkan empat indikator berikut:</p>
         </div>
-        <div class="assessment-grid">
-          <article><strong>15%</strong><span>Kehadiran, adab belajar, dan keaktifan</span></article>
-          <article><strong>25%</strong><span>Latihan kelas dan tugas rumah</span></article>
-          <article><strong>25%</strong><span>Penilaian tengah semester</span></article>
-          <article><strong>35%</strong><span>Project akhir dan penilaian akhir semester</span></article>
+        
+        <div class="assessment-section">
+          <article class="assess-card">
+            <span class="assess-pct">15%</span>
+            <span class="assess-title">Adab &amp; Keaktifan</span>
+            <span class="assess-desc">Kehadiran kelas, tata krama, adab belajar, keaktifan bertanya, serta diskusi kelompok.</span>
+          </article>
+          <article class="assess-card">
+            <span class="assess-pct">25%</span>
+            <span class="assess-title">Tugas &amp; Kuis</span>
+            <span class="assess-desc">Latihan coding mandiri, tantangan kuis mingguan, dan penyusunan modul kecil.</span>
+          </article>
+          <article class="assess-card">
+            <span class="assess-pct">25%</span>
+            <span class="assess-title">Ujian Tengah Semester</span>
+            <span class="assess-desc">Ujian teori sintaksis Dart fundamental dan tes praktik membuat kalkulator/sistem logika sederhana.</span>
+          </article>
+          <article class="assess-card">
+            <span class="assess-pct">35%</span>
+            <span class="assess-title">Proyek Akhir &amp; PAS</span>
+            <span class="assess-desc">Pembuatan proyek aplikasi CLI utuh secara berkelompok, demonstrasi produk, dan ujian tulis akhir.</span>
+          </article>
+        </div>
+
+        <div class="section-heading" style="margin-bottom: 25px;">
+          <h2 style="font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 8px;">Capaian Kompetensi Lulus</h2>
+          <p style="color: var(--muted); font-size: 0.95rem;">Setelah menyelesaikan seluruh 32 pertemuan, peserta didik ditargetkan mampu:</p>
+        </div>
+
+        <div class="outcomes-grid">
+          <div class="outcome-item">
+            <div class="outcome-check"><i class="fas fa-check"></i></div>
+            <p>Memahami konsep dasar bahasa pemrograman Dart, anatomi runtime environment, compile flow (AOT/JIT), dan sintaksis dasar.</p>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-check"><i class="fas fa-check"></i></div>
+            <p>Mampu membuat fungsi modular yang efisien dengan parameter posisional opsional, named parameters, default values, HOF, dan closures.</p>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-check"><i class="fas fa-check"></i></div>
+            <p>Menerapkan pengamanan program menggunakan Sound Null Safety dan menangani pengecualian (Try-Catch) agar aplikasi tidak crash.</p>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-check"><i class="fas fa-check"></i></div>
+            <p>Menguasai pilar Pemrograman Berorientasi Objek (OOP) tingkat lanjut meliputi pewarisan, abstraksi, interface, mixins, dan extensions.</p>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-check"><i class="fas fa-check"></i></div>
+            <p>Membuat program asynchronous non-blocking (Future &amp; Stream) yang terintegrasi dengan package eksternal dari pub.dev.</p>
+          </div>
+          <div class="outcome-item">
+            <div class="outcome-check"><i class="fas fa-check"></i></div>
+            <p>Menulis unit testing otomatis untuk menguji kualitas kode dan merancang proyek akhir aplikasi mandiri berskala menengah.</p>
+          </div>
         </div>
       </section>
     </main>
+
+    <!-- DRAWER DETAIL PERTEMUAN (GLOWING GLASS) -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <aside id="detail-drawer" class="detail-drawer" aria-label="Detail Pertemuan">
+      <!-- Header -->
+      <header class="drawer-header">
+        <div class="drawer-title-area">
+          <span class="drawer-subtitle">Pertemuan <span id="drawer-meet-no">0</span></span>
+          <h2 id="drawer-title">Judul Materi Pembelajaran</h2>
+        </div>
+        <button id="drawer-close" class="drawer-close" aria-label="Tutup Detail">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+
+      <!-- Body -->
+      <div class="drawer-body">
+        <!-- Badges (Bab & JP) -->
+        <div id="drawer-badge-container" class="drawer-badge-wrapper" style="display: flex; gap: 10px;">
+          <!-- badges rendered dynamically -->
+        </div>
+
+        <!-- Deskripsi Materi -->
+        <section class="drawer-section">
+          <h3 class="drawer-section-title"><i class="fas fa-info-circle"></i> Ringkasan Materi</h3>
+          <div id="drawer-desc" class="drawer-desc">
+            <p>Deskripsi materi pembelajaran lengkap...</p>
+          </div>
+        </section>
+
+        <!-- Kompetensi, Kegiatan, Penilaian -->
+        <section class="drawer-section">
+          <h3 class="drawer-section-title"><i class="fas fa-bullseye"></i> Capaian Kompetensi</h3>
+          <ul id="drawer-competence" class="bullet-list">
+            <li>Indikator kompetensi pembelajaran...</li>
+          </ul>
+        </section>
+
+        <section class="drawer-section">
+          <h3 class="drawer-section-title"><i class="fas fa-laptop-code"></i> Aktivitas Kelas</h3>
+          <ul id="drawer-activity" class="bullet-list">
+            <li>Langkah-langkah aktivitas belajar praktik...</li>
+          </ul>
+        </section>
+
+        <section class="drawer-section">
+          <h3 class="drawer-section-title"><i class="fas fa-tasks"></i> Metode Penilaian</h3>
+          <ul id="drawer-assessment" class="bullet-list">
+            <li>Detail metode penilaian kelas/tugas...</li>
+          </ul>
+        </section>
+
+        <!-- Kode Contoh Praktik -->
+        <section class="drawer-section drawer-code-block" style="display: none;">
+          <h3 class="drawer-section-title" style="padding-left: 18px; padding-top: 15px; margin-bottom: 8px;">
+            <i class="fas fa-code"></i> Contoh Kode Praktik Dart
+          </h3>
+          <div class="code-header">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <span class="code-lang">Dart Playground</span>
+          </div>
+          <pre><code id="drawer-code-content">
+// Contoh kode pembelajaran...
+          </code></pre>
+        </section>
+      </div>
+
+      <!-- Footer Action -->
+      <footer class="drawer-footer">
+        <a id="drawer-slide-link" href="#" class="btn-primary" target="_self">
+          <i class="fas fa-play"></i> Buka Slide Presentasi Bab
+        </a>
+      </footer>
+    </aside>
+
+    <!-- JS SCRIPTS -->
+    <script src="script.js?v=2"></script>
   </body>
 </html>

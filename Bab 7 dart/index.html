@@ -3,129 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dart Function - Short Expression, Inner & Main Function</title>
-    <link rel="icon" type="image/png" href="Dart1.png" />
-    <link rel="stylesheet" href="style.css" />
+    <title>Bab 7: Control Flow: Perulangan (Loops) - Dart Programming</title>
+    <link rel="icon" type="image/png" href="../Dart1.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../shared-style.css?v=4" />
   </head>
   <body>
-    <!-- Floating Dart Icons -->
+    <!-- Floating Dart Icons Background -->
     <div class="floating-icons">
-      <img src="Dart1.png" class="float-icon icon-1" alt="Dart" />
-      <img src="Dart1.png" class="float-icon icon-2" alt="Dart" />
-      <img src="Dart1.png" class="float-icon icon-3" alt="Dart" />
-      <img src="Dart1.png" class="float-icon icon-4" alt="Dart" />
+      <img src="../Dart1.png" class="float-icon" style="top: 5%; left: 5%; animation-delay: 0s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 15%; right: 10%; animation-delay: 1s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 60%; left: 8%; animation-delay: 2s" />
+      <img src="../Dart1.png" class="float-icon" style="bottom: 20%; right: 5%; animation-delay: 0.5s" />
     </div>
 
     <!-- Landing Page -->
-    <section id="landing" class="landing active">
-      <div class="landing-header">
-        <img src="Dart1.png" alt="Dart Logo" class="main-logo" />
-        <h1>Function in Dart</h1>
-        <p class="subtitle">
-          Short Expression • Inner Function • Main Function
-        </p>
-      </div>
-
-      <section class="learning-objectives" aria-label="Tujuan pembelajaran">
-        <h2>Tujuan Pembelajaran</h2>
-        <div class="objective-grid">
-          <article>
-            <strong>Arrow Function</strong>
-            <span>Menulis function ringkas menggunakan sintaks short expression.</span>
-          </article>
-          <article>
-            <strong>Inner Function</strong>
-            <span>Membuat function di dalam function untuk membantu modularisasi.</span>
-          </article>
-          <article>
-            <strong>Main Function</strong>
-            <span>Memahami main function sebagai titik awal program Dart.</span>
-          </article>
-          <article>
-            <strong>Project Function</strong>
-            <span>Menerapkan function dalam mini project kelas dan tugas rumah.</span>
-          </article>
-        </div>
-      </section>
-
-      <div class="topics-grid">
-        <div class="topic-card" data-topic="short-expression">
-          <div class="card-icon">⚡</div>
-          <h3>Function Short Expression</h3>
-          <p>
-            Arrow Function dengan sintaks ringkas menggunakan <code>=></code>
+    <section id="landing" class="landing-page active">
+      <div class="landing-container">
+        <div class="hero-section">
+          <div class="main-icon-container">
+            <img src="../Dart1.png" alt="Dart Logo" class="main-dart-icon" />
+            <div class="icon-glow"></div>
+          </div>
+          <h1 class="title">
+            <span class="title-line">BAB 7</span>
+            <span class="title-main">Control Flow</span>
+            <span class="title-sub">Perulangan (Loops)</span>
+          </h1>
+          <p class="subtitle">
+            Kuasai proses otomasi dan iterasi di Dart: perulangan pasti dengan For, perulangan berkondisi dengan While dan Do-While, modifikasi aliran loop dengan Break &amp; Continue, hingga loop modern For-In!
           </p>
-          <span class="slide-count">5 Slides</span>
         </div>
 
-        <div class="topic-card" data-topic="inner-function">
-          <div class="card-icon">🔄</div>
-          <h3>Inner Function</h3>
-          <p>Nested Function yang didefinisikan di dalam function lain</p>
-          <span class="slide-count">6 Slides</span>
+        <section class="learning-objectives" aria-label="Tujuan pembelajaran">
+          <h2>Tujuan Pembelajaran</h2>
+          <div class="objective-grid">
+            <article>
+              <strong>For Loop</strong>
+              <span>Memahami penulisan perulangan for tradisional yang berdasarkan variabel counter.</span>
+            </article>
+            <article>
+              <strong>While &amp; Do-While</strong>
+              <span>Mampu menggunakan perulangan kondisional dan membedakan waktu eksekusinya.</span>
+            </article>
+            <article>
+              <strong>Control Jumps</strong>
+              <span>Mampu mengontrol arah perulangan secara manual menggunakan break dan continue.</span>
+            </article>
+            <article>
+              <strong>Collection Loops</strong>
+              <span>Menguasai iterasi elemen collection dengan gaya for-in yang lebih deklaratif.</span>
+            </article>
+          </div>
+        </section>
+
+        <div class="topics-grid">
+          <div class="topic-card" data-topic="forloop">
+            <div class="card-icon"><i class="fas fa-redo"></i></div>
+            <h3>For Loop</h3>
+            <p>Perulangan Counter Tradisional</p>
+            <span class="card-number">01</span>
+          </div>
+
+          <div class="topic-card" data-topic="whileloop">
+            <div class="card-icon"><i class="fas fa-sync"></i></div>
+            <h3>While &amp; Do-While</h3>
+            <p>Perulangan Kondisional &amp; Pasca-Kondisi</p>
+            <span class="card-number">02</span>
+          </div>
+
+          <div class="topic-card" data-topic="kontrol">
+            <div class="card-icon"><i class="fas fa-ban"></i></div>
+            <h3>Control Loop &amp; Iteration</h3>
+            <p>Break, Continue, &amp; For-In Loop</p>
+            <span class="card-number">03</span>
+          </div>
+
+          <div class="topic-card" data-topic="tugas">
+            <div class="card-icon"><i class="fas fa-edit"></i></div>
+            <h3>Latihan Mandiri</h3>
+            <p>Tugas Rumah Kreatif</p>
+            <span class="card-number">04</span>
+          </div>
         </div>
 
-        <div class="topic-card" data-topic="main-function">
-          <div class="card-icon">🚀</div>
-          <h3>Main Function</h3>
-          <p>Entry point program Dart yang dijalankan pertama kali</p>
-          <span class="slide-count">6 Slides</span>
+        <div class="start-btn-container">
+          <button class="start-btn" onclick="startPresentation()">
+            <span>Mulai Belajar</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
-
-        <div class="topic-card project-card" data-topic="project-kelas">
-          <div class="card-icon">📚</div>
-          <h3>Mini Project Kelas</h3>
-          <p>4 Project praktik untuk dikerjakan di kelas</p>
-          <span class="slide-count">4 Projects</span>
-        </div>
-
-        <div class="topic-card project-card" data-topic="project-rumah">
-          <div class="card-icon">🏠</div>
-          <h3>Mini Project Rumah</h3>
-          <p>4 Project tugas rumah untuk latihan mandiri</p>
-          <span class="slide-count">4 Projects</span>
-        </div>
-      </div>
-
-      <div class="landing-footer">
-        <img src="Dart1.png" alt="Dart" class="footer-logo" />
-        <span>Bab 7 - Dart Programming</span>
       </div>
     </section>
 
     <!-- Slides Container -->
-    <section id="slides-container" class="slides-container">
-      <nav class="slides-nav">
-        <button class="nav-btn home-btn" id="homeBtn">
-          <span>🏠</span> Home
+    <section id="slides-container" class="slides-section">
+      <div class="slide-header">
+        <button class="nav-btn home-btn" onclick="goToLanding()">
+          <i class="fas fa-home"></i>
         </button>
-        <div class="topic-title" id="topicTitle">Topic</div>
-        <div class="slide-progress">
-          <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
         </div>
-      </nav>
-
-      <div class="slides-wrapper" id="slidesWrapper">
-        <!-- Slides will be injected here -->
+        <div class="slide-counter">
+          <span id="currentSlide">1</span> / <span id="totalSlides">1</span>
+        </div>
       </div>
 
-      <div class="slides-controls">
-        <button class="control-btn prev-btn" id="prevBtn">
-          <span>←</span> Sebelumnya
+      <div class="slides-wrapper" id="slidesWrapper">
+        <!-- Slides will be dynamically inserted here -->
+      </div>
+
+      <div class="slide-navigation">
+        <button class="nav-btn prev-btn" onclick="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+          <span>Sebelumnya</span>
         </button>
-        <div class="progress-bar">
-          <div class="progress-fill" id="progressFill"></div>
-        </div>
-        <button class="control-btn next-btn" id="nextBtn">
-          Selanjutnya <span>→</span>
+        <button class="nav-btn next-btn" onclick="nextSlide()">
+          <span>Selanjutnya</span>
+          <i class="fas fa-chevron-right"></i>
         </button>
       </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="slides-data.js"></script>
+    <script src="../shared-script.js?v=4"></script>
   </body>
 </html>

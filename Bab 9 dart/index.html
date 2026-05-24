@@ -3,51 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bab 9: Smart Calculator - Dart Programming</title>
-    <link rel="icon" type="image/png" href="Dart1.png" />
+    <title>Bab 9: Functions Dasar &amp; Parameter - Dart Programming</title>
+    <link rel="icon" type="image/png" href="../Dart1.png" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../shared-style.css?v=4" />
   </head>
   <body>
     <!-- Floating Dart Icons Background -->
     <div class="floating-icons">
-      <img
-        src="Dart1.png"
-        class="float-icon"
-        style="top: 5%; left: 5%; animation-delay: 0s"
-      />
-      <img
-        src="Dart1.png"
-        class="float-icon"
-        style="top: 15%; right: 10%; animation-delay: 1s"
-      />
-      <img
-        src="Dart1.png"
-        class="float-icon"
-        style="top: 60%; left: 8%; animation-delay: 2s"
-      />
-      <img
-        src="Dart1.png"
-        class="float-icon"
-        style="bottom: 20%; right: 5%; animation-delay: 0.5s"
-      />
-      <img
-        src="Dart1.png"
-        class="float-icon"
-        style="top: 40%; right: 15%; animation-delay: 1.5s"
-      />
-      <img
-        src="Dart1.png"
-        class="float-icon"
-        style="bottom: 10%; left: 15%; animation-delay: 2.5s"
-      />
+      <img src="../Dart1.png" class="float-icon" style="top: 5%; left: 5%; animation-delay: 0s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 15%; right: 10%; animation-delay: 1s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 60%; left: 8%; animation-delay: 2s" />
+      <img src="../Dart1.png" class="float-icon" style="bottom: 20%; right: 5%; animation-delay: 0.5s" />
     </div>
 
     <!-- Landing Page -->
@@ -55,17 +29,16 @@
       <div class="landing-container">
         <div class="hero-section">
           <div class="main-icon-container">
-            <img src="Dart1.png" alt="Dart Logo" class="main-dart-icon" />
+            <img src="../Dart1.png" alt="Dart Logo" class="main-dart-icon" />
             <div class="icon-glow"></div>
           </div>
           <h1 class="title">
             <span class="title-line">BAB 9</span>
-            <span class="title-main">Smart Calculator</span>
-            <span class="title-sub">dengan History & Undo</span>
+            <span class="title-main">Functions Dasar</span>
+            <span class="title-sub">&amp; Parameter</span>
           </h1>
           <p class="subtitle">
-            Menguasai Closure, Recursive Function & Comprehensive Testing di
-            Dart
+            Pahami modularisasi kode menggunakan fungsi: cara pendeklarasian, pengembalian nilai (return value), parameter posisi opsional, keunggulan parameter bernama (named parameters) ala Flutter, dan nilai default!
           </p>
         </div>
 
@@ -73,86 +46,44 @@
           <h2>Tujuan Pembelajaran</h2>
           <div class="objective-grid">
             <article>
-              <strong>Closure</strong>
-              <span>Menggunakan function yang menyimpan state dari scope luarnya.</span>
+              <strong>Deklarasi Fungsi</strong>
+              <span>Memahami struktur fungsi dasar, penentuan tipe return, dan fungsi void.</span>
             </article>
             <article>
-              <strong>Recursive Function</strong>
-              <span>Memecah masalah berulang menggunakan function yang memanggil dirinya sendiri.</span>
+              <strong>Positional Param</strong>
+              <span>Mampu menggunakan parameter berbasis posisi, baik yang bersifat wajib maupun opsional [].</span>
             </article>
             <article>
-              <strong>Testing</strong>
-              <span>Menguji normal case, edge case, dan error case pada kode Dart.</span>
+              <strong>Named Param</strong>
+              <span>Menguasai named parameter {} dengan required untuk meningkatkan kejelasan kode.</span>
             </article>
             <article>
-              <strong>Smart Calculator</strong>
-              <span>Menggabungkan closure, rekursi, dan testing dalam mini project.</span>
+              <strong>Default Value</strong>
+              <span>Mampu memberikan nilai default pada parameter opsional untuk efisiensi pemanggilan.</span>
             </article>
           </div>
         </section>
 
         <div class="topics-grid">
-          <div class="topic-card" data-topic="closure">
-            <div class="card-icon">
-              <i class="fas fa-box-archive"></i>
-            </div>
-            <h3>Closure</h3>
-            <p>Menyimpan State & History</p>
+          <div class="topic-card" data-topic="deklarasi">
+            <div class="card-icon"><i class="fas fa-code"></i></div>
+            <h3>Deklarasi &amp; Return</h3>
+            <p>Sintaks Fungsi &amp; Pengembalian Nilai</p>
             <span class="card-number">01</span>
           </div>
 
-          <div class="topic-card" data-topic="recursive">
-            <div class="card-icon">
-              <i class="fas fa-code-branch"></i>
-            </div>
-            <h3>Recursive Function</h3>
-            <p>Evaluate Nested Expressions</p>
+          <div class="topic-card" data-topic="parameter">
+            <div class="card-icon"><i class="fas fa-signature"></i></div>
+            <h3>Tipe Parameter</h3>
+            <p>Positional, Named, &amp; Default Value</p>
             <span class="card-number">02</span>
           </div>
 
-          <div class="topic-card" data-topic="testing">
-            <div class="card-icon">
-              <i class="fas fa-vial"></i>
-            </div>
-            <h3>Comprehensive Tests</h3>
-            <p>Testing Semua Fitur</p>
+          <div class="topic-card" data-topic="tugas">
+            <div class="card-icon"><i class="fas fa-edit"></i></div>
+            <h3>Latihan Mandiri</h3>
+            <p>Tugas Rumah Kreatif</p>
             <span class="card-number">03</span>
-          </div>
-
-          <div class="topic-card" data-topic="implementation">
-            <div class="card-icon">
-              <i class="fas fa-calculator"></i>
-            </div>
-            <h3>Final Implementation</h3>
-            <p>Smart Calculator Lengkap</p>
-            <span class="card-number">04</span>
-          </div>
-
-          <div class="topic-card" data-topic="rangkuman">
-            <div class="card-icon">
-              <i class="fas fa-list-check"></i>
-            </div>
-            <h3>Rangkuman</h3>
-            <p>Kesimpulan Materi Bab 9</p>
-            <span class="card-number">05</span>
-          </div>
-
-          <div class="topic-card" data-topic="miniproject">
-            <div class="card-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3>Mini Project</h3>
-            <p>Latihan di Kelas</p>
-            <span class="card-number">06</span>
-          </div>
-
-          <div class="topic-card" data-topic="tugasrumah">
-            <div class="card-icon">
-              <i class="fas fa-house-chimney"></i>
-            </div>
-            <h3>Tugas Rumah</h3>
-            <p>Project Mandiri</p>
-            <span class="card-number">07</span>
           </div>
         </div>
 
@@ -196,6 +127,6 @@
     </section>
 
     <script src="slides-data.js"></script>
-    <script src="script.js"></script>
+    <script src="../shared-script.js?v=4"></script>
   </body>
 </html>

@@ -1,164 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dart Programming - Bab 6</title>
-    <link rel="icon" type="image/png" href="Dart1.png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bab 6: Control Flow: Percabangan - Dart Programming</title>
+    <link rel="icon" type="image/png" href="../Dart1.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../shared-style.css?v=4" />
+  </head>
+  <body>
     <!-- Floating Dart Icons Background -->
     <div class="floating-icons">
-        <img src="Dart1.png" alt="Dart" class="float-icon icon-1">
-        <img src="Dart1.png" alt="Dart" class="float-icon icon-2">
-        <img src="Dart1.png" alt="Dart" class="float-icon icon-3">
-        <img src="Dart1.png" alt="Dart" class="float-icon icon-4">
-        <img src="Dart1.png" alt="Dart" class="float-icon icon-5">
-        <img src="Dart1.png" alt="Dart" class="float-icon icon-6">
+      <img src="../Dart1.png" class="float-icon" style="top: 5%; left: 5%; animation-delay: 0s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 15%; right: 10%; animation-delay: 1s" />
+      <img src="../Dart1.png" class="float-icon" style="top: 60%; left: 8%; animation-delay: 2s" />
+      <img src="../Dart1.png" class="float-icon" style="bottom: 20%; right: 5%; animation-delay: 0.5s" />
     </div>
 
     <!-- Landing Page -->
-    <div id="landing" class="landing-container">
-        <header class="hero">
-            <div class="hero-icon">
-                <img src="Dart1.png" alt="Dart Logo" class="dart-logo">
-            </div>
-            <h1 class="hero-title">DART PROGRAMMING</h1>
-            <p class="hero-subtitle">Bab 6: Null, Operators & Loops</p>
-            <div class="hero-line"></div>
-        </header>
+    <section id="landing" class="landing-page active">
+      <div class="landing-container">
+        <div class="hero-section">
+          <div class="main-icon-container">
+            <img src="../Dart1.png" alt="Dart Logo" class="main-dart-icon" />
+            <div class="icon-glow"></div>
+          </div>
+          <h1 class="title">
+            <span class="title-line">BAB 6</span>
+            <span class="title-main">Control Flow</span>
+            <span class="title-sub">Percabangan</span>
+          </h1>
+          <p class="subtitle">
+            Kuasai pengambilan keputusan di Dart: logika pengkondisian If-Else, penulisan ringkas Ternary, Switch-Case klasik, hingga Switch Expression modern Dart 3!
+          </p>
+        </div>
 
         <section class="learning-objectives" aria-label="Tujuan pembelajaran">
-            <h2>Tujuan Pembelajaran</h2>
-            <div class="objective-grid">
-                <article>
-                    <strong>Null</strong>
-                    <span>Memahami nilai kosong dan kapan variabel dapat bernilai null.</span>
-                </article>
-                <article>
-                    <strong>Null Safety</strong>
-                    <span>Menerapkan nullable type dan null-aware operator untuk mencegah error.</span>
-                </article>
-                <article>
-                    <strong>Ternary</strong>
-                    <span>Menggunakan ternary operator untuk keputusan sederhana.</span>
-                </article>
-                <article>
-                    <strong>Loop</strong>
-                    <span>Menggunakan for, while, do-while, dan for-in untuk perulangan.</span>
-                </article>
-            </div>
+          <h2>Tujuan Pembelajaran</h2>
+          <div class="objective-grid">
+            <article>
+              <strong>If-Else</strong>
+              <span>Mampu menyusun logika percabangan bertingkat dan bersarang dengan benar.</span>
+            </article>
+            <article>
+              <strong>Ternary</strong>
+              <span>Menguasai penulisan operator ternary untuk penugasan nilai berkondisi yang singkat.</span>
+            </article>
+            <article>
+              <strong>Switch-Case</strong>
+              <span>Mampu memetakan nilai konstan menggunakan struktur switch-case tradisional.</span>
+            </article>
+            <article>
+              <strong>Switch Expression</strong>
+              <span>Memahami sintaks baru Dart 3+ yang ekspresif untuk mengembalikan nilai secara instan.</span>
+            </article>
+          </div>
         </section>
 
-        <main class="topics-grid">
-            <!-- Topic Cards -->
-            <div class="topic-card" onclick="openTopic('null')">
-                <div class="card-icon">🔲</div>
-                <h3>Null</h3>
-                <p>Nilai kosong dalam Dart</p>
-                <span class="card-arrow">→</span>
-            </div>
+        <div class="topics-grid">
+          <div class="topic-card" data-topic="ifelse">
+            <div class="card-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>If, Else If, &amp; Else</h3>
+            <p>Struktur Percabangan Standar &amp; Bersarang</p>
+            <span class="card-number">01</span>
+          </div>
 
-            <div class="topic-card" onclick="openTopic('ternary')">
-                <div class="card-icon">❓</div>
-                <h3>Ternary Operator</h3>
-                <p>If-else dalam satu baris</p>
-                <span class="card-arrow">→</span>
-            </div>
+          <div class="topic-card" data-topic="ternary">
+            <div class="card-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Ternary Operator</h3>
+            <p>Pernyataan Singkat (kondisi ? true : false)</p>
+            <span class="card-number">02</span>
+          </div>
 
-            <div class="topic-card" onclick="openTopic('nullsafety')">
-                <div class="card-icon">🛡️</div>
-                <h3>Null Safety</h3>
-                <p>Mencegah null errors</p>
-                <span class="card-arrow">→</span>
-            </div>
+          <div class="topic-card" data-topic="switchcase">
+            <div class="card-icon"><i class="fas fa-list-ol"></i></div>
+            <h3>Switch-Case &amp; Expression</h3>
+            <p>Switch Tradisional &amp; Sintaks Baru Dart 3+</p>
+            <span class="card-number">03</span>
+          </div>
 
-            <div class="topic-card" onclick="openTopic('forloop')">
-                <div class="card-icon">🔁</div>
-                <h3>For Loop</h3>
-                <p>Perulangan dengan counter</p>
-                <span class="card-arrow">→</span>
-            </div>
-
-            <div class="topic-card" onclick="openTopic('whileloop')">
-                <div class="card-icon">🔄</div>
-                <h3>While Loop</h3>
-                <p>Perulangan dengan kondisi</p>
-                <span class="card-arrow">→</span>
-            </div>
-
-            <div class="topic-card" onclick="openTopic('dowhile')">
-                <div class="card-icon">🔃</div>
-                <h3>Do While Loop</h3>
-                <p>Minimal 1x eksekusi</p>
-                <span class="card-arrow">→</span>
-            </div>
-
-            <div class="topic-card" onclick="openTopic('forin')">
-                <div class="card-icon">📋</div>
-                <h3>For In Loop</h3>
-                <p>Iterasi collection</p>
-                <span class="card-arrow">→</span>
-            </div>
-
-            <!-- Mini Projects -->
-            <div class="topic-card project-card" onclick="openTopic('projectkelas')">
-                <div class="card-icon">💻</div>
-                <h3>Mini Project Kelas</h3>
-                <p>4 Project latihan bersama</p>
-                <span class="card-arrow">→</span>
-            </div>
-
-            <div class="topic-card project-card" onclick="openTopic('projectrumah')">
-                <div class="card-icon">🏠</div>
-                <h3>Tugas Rumah</h3>
-                <p>4 Project untuk dikerjakan</p>
-                <span class="card-arrow">→</span>
-            </div>
-        </main>
-
-        <footer class="landing-footer">
-            <p>Gunakan tombol <kbd>←</kbd> <kbd>→</kbd> untuk navigasi slide</p>
-        </footer>
-    </div>
-
-    <!-- Slide Container -->
-    <div id="slideContainer" class="slide-container hidden">
-        <nav class="slide-nav">
-            <button class="nav-btn back-btn" onclick="showLanding()">
-                <span>←</span> Kembali
-            </button>
-            <h2 class="slide-title" id="slideTitle">Topic Title</h2>
-            <div class="slide-counter">
-                <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
-            </div>
-        </nav>
-
-        <div class="slide-content" id="slideContent">
-            <!-- Slide content will be injected here -->
+          <div class="topic-card" data-topic="tugas">
+            <div class="card-icon"><i class="fas fa-edit"></i></div>
+            <h3>Latihan Mandiri</h3>
+            <p>Tugas Rumah Kreatif</p>
+            <span class="card-number">04</span>
+          </div>
         </div>
 
-        <div class="slide-controls">
-            <button class="control-btn prev-btn" onclick="prevSlide()" id="prevBtn">
-                <span>←</span> Sebelumnya
-            </button>
-            
-            <div class="slide-indicators" id="slideIndicators">
-                <!-- Indicators will be injected here -->
-            </div>
-
-            <button class="control-btn next-btn" onclick="nextSlide()" id="nextBtn">
-                Selanjutnya <span>→</span>
-            </button>
+        <div class="start-btn-container">
+          <button class="start-btn" onclick="startPresentation()">
+            <span>Mulai Belajar</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
+      </div>
+    </section>
 
-        <div class="progress-bar">
-            <div class="progress-fill" id="progressFill"></div>
+    <!-- Slides Container -->
+    <section id="slides-container" class="slides-section">
+      <div class="slide-header">
+        <button class="nav-btn home-btn" onclick="goToLanding()">
+          <i class="fas fa-home"></i>
+        </button>
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
         </div>
-    </div>
+        <div class="slide-counter">
+          <span id="currentSlide">1</span> / <span id="totalSlides">1</span>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
-</body>
+      <div class="slides-wrapper" id="slidesWrapper">
+        <!-- Slides will be dynamically inserted here -->
+      </div>
+
+      <div class="slide-navigation">
+        <button class="nav-btn prev-btn" onclick="prevSlide()">
+          <i class="fas fa-chevron-left"></i>
+          <span>Sebelumnya</span>
+        </button>
+        <button class="nav-btn next-btn" onclick="nextSlide()">
+          <span>Selanjutnya</span>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <script src="slides-data.js"></script>
+    <script src="../shared-script.js?v=4"></script>
+  </body>
 </html>

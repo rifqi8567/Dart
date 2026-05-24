@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bab 4: Tipe Data &amp; Type Casting - Dart Programming</title>
+    <title>Bab 11: Null Safety secara Mendalam - Dart Programming</title>
     <link rel="icon" type="image/png" href="../Dart1.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
@@ -33,12 +33,12 @@
             <div class="icon-glow"></div>
           </div>
           <h1 class="title">
-            <span class="title-line">BAB 4</span>
-            <span class="title-main">Tipe Data</span>
-            <span class="title-sub">&amp; Type Casting</span>
+            <span class="title-line">BAB 11</span>
+            <span class="title-main">Null Safety</span>
+            <span class="title-sub">secara Mendalam</span>
           </h1>
           <p class="subtitle">
-            Pahami sistem tipe data statically typed Dart: representasi numerik, manipulasi String modern, hingga konversi data (parsing &amp; casting) yang aman!
+            Pahami sistem tipe data aman di Dart: pencegahan error Null Pointer Exception, pembagian Nullable &amp; Non-Nullable types, operator null-aware, serta optimasi kode via Type Promotion!
           </p>
         </div>
 
@@ -46,50 +46,50 @@
           <h2>Tujuan Pembelajaran</h2>
           <div class="objective-grid">
             <article>
-              <strong>Tipe Data Dasar</strong>
-              <span>Memahami karakteristik tipe data dasar seperti int, double, String, bool, dan dynamic.</span>
+              <strong>Sound Null Safety</strong>
+              <span>Memahami pentingnya null safety dan bahaya crash null pointer exception.</span>
             </article>
             <article>
-              <strong>Interpolasi &amp; Raw</strong>
-              <span>Mampu memanipulasi teks dengan String interpolation, multiline, dan raw string.</span>
+              <strong>Nullable &amp; Non-null</strong>
+              <span>Mampu membedakan dan mendeklarasikan tipe data nullable (?) serta non-nullable.</span>
             </article>
             <article>
-              <strong>Parsing Data</strong>
-              <span>Mampu mengonversi String ke tipe data angka dan sebaliknya dengan aman.</span>
+              <strong>Null-aware Operators</strong>
+              <span>Menguasai penggunaan operator conditional access (?.), coalescing (??), dan assertions (!).</span>
             </article>
             <article>
-              <strong>Type Casting</strong>
-              <span>Menguasai penggunaan operator type test (is, is!) dan type cast (as).</span>
+              <strong>Type Promotion</strong>
+              <span>Memahami cara kerja Flow Analysis untuk menaikkan tipe data nullable secara otomatis.</span>
             </article>
           </div>
         </section>
 
         <div class="topics-grid">
-          <div class="topic-card" data-topic="dasar">
-            <div class="card-icon"><i class="fas fa-font"></i></div>
-            <h3>Tipe Data Dasar</h3>
-            <p>Representasi int, double, num, &amp; bool</p>
+          <div class="topic-card" data-topic="konsep">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Konsep &amp; Tipe</h3>
+            <p>Sound Null Safety, Nullable &amp; Non-Nullable</p>
             <span class="card-number">01</span>
           </div>
 
-          <div class="topic-card" data-topic="strings">
-            <div class="card-icon"><i class="fas fa-quote-left"></i></div>
-            <h3>String &amp; Text</h3>
-            <p>Interpolation, Multiline, &amp; Raw String</p>
+          <div class="topic-card" data-topic="operators">
+            <div class="card-icon"><i class="fas fa-code"></i></div>
+            <h3>Null-aware Operators</h3>
+            <p>Sintaks Safe Access, Coalescing, &amp; Assertions</p>
             <span class="card-number">02</span>
           </div>
 
-          <div class="topic-card" data-topic="casting">
-            <div class="card-icon"><i class="fas fa-exchange-alt"></i></div>
-            <h3>Type Casting</h3>
-            <p>Parsing Angka &amp; Operator as/is/is!</p>
+          <div class="topic-card" data-topic="promotion">
+            <div class="card-icon"><i class="fas fa-level-up-alt"></i></div>
+            <h3>Type Promotion</h3>
+            <p>Flow Analysis &amp; Enkapsulasi late</p>
             <span class="card-number">03</span>
           </div>
 
           <div class="topic-card" data-topic="tugas">
             <div class="card-icon"><i class="fas fa-edit"></i></div>
             <h3>Latihan Mandiri</h3>
-            <p>Tugas Rumah Kreatif</p>
+            <p>Tugas Rumah Null Safety</p>
             <span class="card-number">04</span>
           </div>
         </div>

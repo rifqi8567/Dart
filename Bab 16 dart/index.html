@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bab 4: Tipe Data &amp; Type Casting - Dart Programming</title>
+    <title>Bab 16: Modern Dart &amp; Robust Code - Dart Programming</title>
     <link rel="icon" type="image/png" href="../Dart1.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="../shared-style.css?v=4" />
   </head>
   <body>
-    <!-- Floating Dart Icons Background -->
     <div class="floating-icons">
       <img src="../Dart1.png" class="float-icon" style="top: 5%; left: 5%; animation-delay: 0s" />
       <img src="../Dart1.png" class="float-icon" style="top: 15%; right: 10%; animation-delay: 1s" />
@@ -24,7 +23,6 @@
       <img src="../Dart1.png" class="float-icon" style="bottom: 20%; right: 5%; animation-delay: 0.5s" />
     </div>
 
-    <!-- Landing Page -->
     <section id="landing" class="landing-page active">
       <div class="landing-container">
         <div class="hero-section">
@@ -33,12 +31,12 @@
             <div class="icon-glow"></div>
           </div>
           <h1 class="title">
-            <span class="title-line">BAB 4</span>
-            <span class="title-main">Tipe Data</span>
-            <span class="title-sub">&amp; Type Casting</span>
+            <span class="title-line">BAB 16</span>
+            <span class="title-main">Modern Dart</span>
+            <span class="title-sub">Records, Patterns, dan Robust Code</span>
           </h1>
           <p class="subtitle">
-            Pahami sistem tipe data statically typed Dart: representasi numerik, manipulasi String modern, hingga konversi data (parsing &amp; casting) yang aman!
+            Lengkapi fondasi Dart dengan fitur modern Dart 3, strategi error handling yang rapi, serta konsep concurrency isolate untuk kode yang lebih aman, ekspresif, dan siap dipakai di proyek Flutter maupun CLI.
           </p>
         </div>
 
@@ -46,51 +44,44 @@
           <h2>Tujuan Pembelajaran</h2>
           <div class="objective-grid">
             <article>
-              <strong>Tipe Data Dasar</strong>
-              <span>Memahami karakteristik tipe data dasar seperti int, double, String, bool, dan dynamic.</span>
+              <strong>Records &amp; Patterns</strong>
+              <span>Menggunakan records untuk mengembalikan banyak nilai dan patterns untuk destructuring data.</span>
             </article>
             <article>
-              <strong>Interpolasi &amp; Raw</strong>
-              <span>Mampu memanipulasi teks dengan String interpolation, multiline, dan raw string.</span>
+              <strong>Enum &amp; Modifier</strong>
+              <span>Memahami enhanced enum dan class modifiers untuk desain API yang lebih jelas.</span>
             </article>
             <article>
-              <strong>Parsing Data</strong>
-              <span>Mampu mengonversi String ke tipe data angka dan sebaliknya dengan aman.</span>
+              <strong>Robust Code</strong>
+              <span>Menulis error handling, assertion, dan cleanup dengan try-catch-finally.</span>
             </article>
             <article>
-              <strong>Type Casting</strong>
-              <span>Menguasai penggunaan operator type test (is, is!) dan type cast (as).</span>
+              <strong>Concurrency</strong>
+              <span>Membedakan async non-blocking dengan isolate untuk kerja CPU yang berat.</span>
             </article>
           </div>
         </section>
 
         <div class="topics-grid">
-          <div class="topic-card" data-topic="dasar">
-            <div class="card-icon"><i class="fas fa-font"></i></div>
-            <h3>Tipe Data Dasar</h3>
-            <p>Representasi int, double, num, &amp; bool</p>
+          <div class="topic-card" data-topic="modern">
+            <div class="card-icon"><i class="fas fa-code-branch"></i></div>
+            <h3>Modern Dart 3</h3>
+            <p>Records, patterns, enum, dan class modifiers</p>
             <span class="card-number">01</span>
           </div>
 
-          <div class="topic-card" data-topic="strings">
-            <div class="card-icon"><i class="fas fa-quote-left"></i></div>
-            <h3>String &amp; Text</h3>
-            <p>Interpolation, Multiline, &amp; Raw String</p>
+          <div class="topic-card" data-topic="robust">
+            <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Robust Code</h3>
+            <p>Exception, assert, cleanup, dan isolate</p>
             <span class="card-number">02</span>
-          </div>
-
-          <div class="topic-card" data-topic="casting">
-            <div class="card-icon"><i class="fas fa-exchange-alt"></i></div>
-            <h3>Type Casting</h3>
-            <p>Parsing Angka &amp; Operator as/is/is!</p>
-            <span class="card-number">03</span>
           </div>
 
           <div class="topic-card" data-topic="tugas">
             <div class="card-icon"><i class="fas fa-edit"></i></div>
             <h3>Latihan Mandiri</h3>
-            <p>Tugas Rumah Kreatif</p>
-            <span class="card-number">04</span>
+            <p>Mini project validasi data modern</p>
+            <span class="card-number">03</span>
           </div>
         </div>
 
@@ -103,7 +94,6 @@
       </div>
     </section>
 
-    <!-- Slides Container -->
     <section id="slides-container" class="slides-section">
       <div class="slide-header">
         <button class="nav-btn home-btn" onclick="goToLanding()">

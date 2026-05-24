@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dart Masterclass - Portal Materi</title>
     <link rel="icon" type="image/png" href="Dart1.png" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -22,10 +22,30 @@
     </div>
 
     <main class="content">
+      <!-- Floating decorative Dart icons as background ornaments -->
+      <div class="floating-shapes">
+        <div class="shape shape-1"><img src="Dart1.png" alt="Dart Deco 1" /></div>
+        <div class="shape shape-2"><img src="Dart1.png" alt="Dart Deco 2" /></div>
+        <div class="shape shape-3"><img src="Dart1.png" alt="Dart Deco 3" /></div>
+        <div class="shape shape-4"><img src="Dart1.png" alt="Dart Deco 4" /></div>
+        <div class="shape shape-5"><img src="Dart1.png" alt="Dart Deco 5" /></div>
+        <div class="shape shape-6"><img src="Dart1.png" alt="Dart Deco 6" /></div>
+      </div>
+
       <header class="hero">
-        <div class="logo-area">
-          <img src="Dart1.png" alt="Dart Logo" class="main-logo" />
-          <div class="logo-glow"></div>
+        <div class="logo-3d-container">
+          <div class="logo-3d-scene">
+            <div class="logo-3d-card">
+              <div class="logo-3d-face face-front">
+                <img src="Dart1.png" alt="Dart Front" />
+              </div>
+              <div class="logo-3d-face face-back">
+                <img src="Dart1.png" alt="Dart Back" style="transform: rotateY(180deg);" />
+              </div>
+              <div class="logo-3d-ring"></div>
+              <div class="logo-3d-ring ring-vertical"></div>
+            </div>
+          </div>
         </div>
         <h1 class="title">DART <span class="highlight">MASTERCLASS</span></h1>
         <p class="subtitle">Kuasai Pemrograman Dart dari Dasar hingga Mahir</p>
@@ -37,7 +57,7 @@
           <div class="card-content">
             <div class="card-icon">🚀</div>
             <h3>Bab 1</h3>
-            <p>Pengenalan & Sejarah</p>
+            <p>Pengenalan & Setup</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -45,9 +65,9 @@
         <!-- Bab 2 -->
         <a href="Bab 2 dart/index.html" class="card" style="--i: 2">
           <div class="card-content">
-            <div class="card-icon">📦</div>
+            <div class="card-icon">🏗️</div>
             <h3>Bab 2</h3>
-            <p>Variabel & Tipe Data</p>
+            <p>Struktur Program & Komentar</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -55,9 +75,9 @@
         <!-- Bab 3 -->
         <a href="Bab 3 dart/index.html" class="card" style="--i: 3">
           <div class="card-content">
-            <div class="card-icon">🏗️</div>
+            <div class="card-icon">📦</div>
             <h3>Bab 3</h3>
-            <p>Struktur Program</p>
+            <p>Variabel, Konstanta & Scope</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -65,9 +85,9 @@
         <!-- Bab 4 -->
         <a href="Bab 4 dart/index.html" class="card" style="--i: 4">
           <div class="card-content">
-            <div class="card-icon">➕</div>
+            <div class="card-icon">🔤</div>
             <h3>Bab 4</h3>
-            <p>Operator Dart</p>
+            <p>Tipe Data & Type Casting</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -75,9 +95,9 @@
         <!-- Bab 5 -->
         <a href="Bab 5 dart/index.html" class="card" style="--i: 5">
           <div class="card-content">
-            <div class="card-icon">🔄</div>
+            <div class="card-icon">➕</div>
             <h3>Bab 5</h3>
-            <p>Control Flow</p>
+            <p>Operator Dart Lengkap</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -85,9 +105,9 @@
         <!-- Bab 6 -->
         <a href="Bab 6 dart/index.html" class="card" style="--i: 6">
           <div class="card-content">
-            <div class="card-icon">🏠</div>
+            <div class="card-icon">🔄</div>
             <h3>Bab 6</h3>
-            <p>Functions Dasar</p>
+            <p>Control Flow: Percabangan</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -95,9 +115,9 @@
         <!-- Bab 7 -->
         <a href="Bab 7 dart/index.html" class="card" style="--i: 7">
           <div class="card-content">
-            <div class="card-icon">🎯</div>
+            <div class="card-icon">🔁</div>
             <h3>Bab 7</h3>
-            <p>Advanced Functions</p>
+            <p>Control Flow: Perulangan</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -105,9 +125,9 @@
         <!-- Bab 8 -->
         <a href="Bab 8 dart/index.html" class="card" style="--i: 8">
           <div class="card-content">
-            <div class="card-icon">🛡️</div>
+            <div class="card-icon">📚</div>
             <h3>Bab 8</h3>
-            <p>Null Safety & Ternary</p>
+            <p>Collections secara Mendalam</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
@@ -115,20 +135,100 @@
         <!-- Bab 9 -->
         <a href="Bab 9 dart/index.html" class="card" style="--i: 9">
           <div class="card-content">
-            <div class="card-icon">⚡</div>
+            <div class="card-icon">🏠</div>
             <h3>Bab 9</h3>
-            <p>Asynchronous Dart</p>
+            <p>Functions Dasar & Parameter</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 10 -->
+        <a href="Bab 10 dart/index.html" class="card" style="--i: 10">
+          <div class="card-content">
+            <div class="card-icon">🎯</div>
+            <h3>Bab 10</h3>
+            <p>Advanced Functions & HOF</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 11 -->
+        <a href="Bab 11 dart/index.html" class="card" style="--i: 11">
+          <div class="card-content">
+            <div class="card-icon">🛡️</div>
+            <h3>Bab 11</h3>
+            <p>Null Safety secara Mendalam</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 12 -->
+        <a href="Bab 12 dart/index.html" class="card" style="--i: 12">
+          <div class="card-content">
+            <div class="card-icon">🧱</div>
+            <h3>Bab 12</h3>
+            <p>OOP Part 1: Class & Member</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 13 -->
+        <a href="Bab 13 dart/index.html" class="card" style="--i: 13">
+          <div class="card-content">
+            <div class="card-icon">🧬</div>
+            <h3>Bab 13</h3>
+            <p>OOP Part 2: Inheritance & Mixin</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 14 -->
+        <a href="Bab 14 dart/index.html" class="card" style="--i: 14">
+          <div class="card-content">
+            <div class="card-icon">📦</div>
+            <h3>Bab 14</h3>
+            <p>Generics & Packages pub.dev</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 15 -->
+        <a href="Bab 15 dart/index.html" class="card" style="--i: 15">
+          <div class="card-content">
+            <div class="card-icon">⚡</div>
+            <h3>Bab 15</h3>
+            <p>Async Programming & Testing</p>
+            <span class="btn-explore">Mulai Belajar</span>
+          </div>
+        </a>
+
+        <!-- Bab 16 -->
+        <a href="Bab 16 dart/index.html" class="card" style="--i: 16">
+          <div class="card-content">
+            <div class="card-icon">🧩</div>
+            <h3>Bab 16</h3>
+            <p>Modern Dart & Robust Code</p>
             <span class="btn-explore">Mulai Belajar</span>
           </div>
         </a>
 
         <!-- Silabus Semester Genap -->
-        <a href="Silabus Semester Genap/index.html" class="card syllabus-card" style="--i: 10">
+        <a href="Silabus Semester Genap/index.html" class="card syllabus-card" style="--i: 17">
           <div class="card-content">
-            <div class="card-icon">S</div>
+            <div class="card-icon">📝</div>
             <h3>Silabus 10B</h3>
             <p>Semester Genap</p>
             <span class="btn-explore">Buka Silabus</span>
+          </div>
+        </a>
+
+        <!-- Referensi Materi -->
+        <a href="Referensi Materi/index.html" class="card reference-card" style="--i: 18">
+          <div class="card-content">
+            <div class="card-icon">🔎</div>
+            <h3>Referensi</h3>
+            <p>Peta sumber materi per bab</p>
+            <span class="btn-explore">Lihat Referensi</span>
           </div>
         </a>
       </section>
@@ -138,6 +238,6 @@
       </footer>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
   </body>
 </html>

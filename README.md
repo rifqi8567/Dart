@@ -12,7 +12,7 @@
   <img src="https://img.shields.io/badge/Platform-Web-blue?style=for-the-badge&logo=html5" alt="Platform">
   <img src="https://img.shields.io/badge/Language-Dart-0175C2?style=for-the-badge&logo=dart" alt="Language">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/Chapters-9-purple?style=for-the-badge" alt="Chapters">
+  <img src="https://img.shields.io/badge/Chapters-15-purple?style=for-the-badge" alt="Chapters">
 </p>
 
 ---
@@ -25,75 +25,93 @@
 
 | Fitur | Deskripsi |
 |-------|-----------|
-| 🎨 **Desain Premium** | Antarmuka modern dengan efek glassmorphism dan animasi dinamis |
+| 🎨 **Desain Premium** | Antarmuka modern dengan efek glassmorphism, floating particles, dan animasi dinamis |
 | 🌐 **Fully Responsive** | Tampilan optimal di desktop, tablet, dan mobile |
-| ✨ **Animasi 3D** | Efek tilt dan parallax pada kartu materi |
-| 🎯 **9 Bab Lengkap** | Materi terstruktur dari dasar hingga advanced |
-| 💡 **Mini Projects** | Latihan praktis di setiap bab |
-| 📝 **Tugas Rumah** | Penugasan untuk menguji pemahaman |
+| ⚡ **Navigasi Cerdas** | Navigasi slide menggunakan swipe HP, klik, keyboard, serta progress bar instan |
+| 📚 **15 Bab Lengkap** | Materi terstruktur dari dasar hingga pemrograman asinkron dan pengujian otomatis |
+| 💡 **Mini Projects** | Latihan praktis interaktif di setiap akhir bab |
+| 📝 **Tugas Rumah** | Penugasan mandiri terintegrasi untuk menguji pemahaman |
 
 ---
 
 ## 📚 Daftar Materi
 
-Portal ini terdiri dari **9 bab** yang disusun secara bertahap:
+Portal ini terdiri dari **15 bab** yang disusun secara bertahap:
 
-### 🎯 Bab 1: Pengenalan & Sejarah
-- Apa itu Dart?
-- Sejarah dan perkembangan Dart
-- Keunggulan Dart dibandingkan bahasa lain
-- Setup environment
+### 🎯 Bab 1: Pengenalan & Setup Environment
+- Apa itu Dart, sejarah (Lars Bak & Kasper Lund), dan ekosistemnya.
+- Kompilasi JIT vs AOT dan sistem pengetikan (type system).
+- Setup SDK, VS Code, dan uji coba menggunakan DartPad.
 
-### 📦 Bab 2: Variabel & Tipe Data
-- Variabel dan konstanta
-- Tipe data primitif (int, double, String, bool)
-- Type inference dengan `var`
-- Dynamic type
+### 🏗️ Bab 2: Struktur Program & Komentar
+- Anatomi file program Dart dan fungsi `main()`.
+- Penulisan komentar (`//`, `/* */`, `///`).
+- Penggunaan library bawaan dengan kata kunci `import`.
 
-### 🏗️ Bab 3: Struktur Program
-- Struktur dasar program Dart
-- Comments (single-line, multi-line, documentation)
-- Library dan import
-- Top-level functions
+### 📦 Bab 3: Variabel, Konstanta & Scope
+- Deklarasi variabel dengan `var` dan `dynamic`.
+- Perbedaan runtime constant (`final`) vs compile-time constant (`const`).
+- Penggunaan keyword `late` serta konsep block, local, dan global scope.
 
-### ➕ Bab 4: Operator Dart
-- Operator aritmatika
-- Operator perbandingan
-- Operator logika
-- Operator assignment
-- Operator bitwise
+### 🔤 Bab 4: Tipe Data & Type Casting
+- Tipe data bawaan (`int`, `double`, `num`, `String`, `bool`).
+- String interpolation, multiline & raw strings.
+- Konversi tipe data (parsing string ke angka & casting `as`, `is`, `is!`).
 
-### 🔄 Bab 5: Control Flow
-- If-else statements
-- Switch-case
-- For loops
-- While dan do-while loops
-- Break dan continue
+### ➕ Bab 5: Operator Dart Lengkap
+- Operator aritmatika (termasuk pembagian integer `~/`).
+- Operator perbandingan/relasional dan assignment.
+- Operator logika (`&&`, `||`, `!`), bitwise, dan type test.
 
-### 🏠 Bab 6: Functions Dasar
-- Deklarasi function
-- Parameter (positional, named, optional)
-- Return values
-- Main function
+### 🔄 Bab 6: Control Flow: Percabangan
+- Struktur pengkondisian `if`, `else if`, `else`.
+- Percabangan modern Switch Expression Dart 3+ dan switch-case standar.
+- Ternary operator (`? :`) dan penanganan error dasar.
 
-### 🎯 Bab 7: Advanced Functions
-- Short expression (arrow function)
-- Inner function
-- Function sebagai first-class citizen
-- Callback functions
+### 🔁 Bab 7: Control Flow: Perulangan
+- Perulangan konvensional (`for`, `while`, `do-while`).
+- Kontrol loop dengan `break` dan `continue`.
+- Perulangan collection (`for-in` dan fungsional `forEach`).
 
-### 🛡️ Bab 8: Null Safety & Ternary
-- Konsep null
-- Null safety di Dart
-- Nullable types (`?`)
-- Null-aware operators (`??`, `?.`, `!`)
-- Ternary operator
+### 📚 Bab 8: Collections secara Mendalam
+- Larik terurut (`List`) dan koleksi data unik (`Set`).
+- Pasangan kunci-nilai (`Map`) dan antrean double-ended (`Queue`).
+- Fitur Spread Operator (`...`), Collection-If, dan Collection-For.
 
-### ⚡ Bab 9: Higher Order Functions
-- Anonymous function / Lambda
-- Higher Order Function
-- Scope dan Lexical Scope
-- Closures
+### 🏠 Bab 9: Functions Dasar & Parameter
+- Deklarasi fungsi dan penentuan tipe return value.
+- Parameter posisional wajib dan opsional menggunakan `[]`.
+- Parameter bernama (named parameter) menggunakan `{}` dengan `required` dan default value.
+
+### 🎯 Bab 10: Advanced Functions & Functional Dart
+- Ekspresi singkat (Arrow Function `=>`) dan inner/nested function.
+- Lambda expression / Anonymous function.
+- Higher-Order Functions (`map`, `where`, `reduce`, `fold`) dan Lexical Closure.
+
+### 🛡️ Bab 11: Null Safety secara Mendalam
+- Konsep nilai kosong (Null) dan bahaya Null Pointer Exception.
+- Perbedaan tipe data non-nullable vs nullable (`Type?`).
+- Operator null-aware (`??`, `?.`, `??=`, bang operator `!`) dan flow analysis type promotion.
+
+### 🧱 Bab 12: OOP Part 1: Class, Object, & Members
+- Paradigma Object-Oriented Programming (OOP) di Dart.
+- Pembuatan Class, instansiasi Object, Fields, Getter, & Setter.
+- Constructor (Default, Named, Redirecting, Const, Factory) serta keyword `this`.
+
+### 🧬 Bab 13: OOP Part 2: Inheritance & Abstraction
+- Pewarisan sifat (`extends`), konstruktor parent (`super`), dan overriding method (`@override`).
+- Kelas abstrak (`abstract class`) dan implicit interface (`implements`).
+- Pemanfaatan Mixins (`with`) dan penambahan method kustom via Extension Methods.
+
+### 📦 Bab 14: Generics, Type System & Packages
+- Konsep dasar generic class dan generic method menggunakan `<T>`.
+- Pembatasan tipe generic (Generic Type Constraints) dengan `extends`.
+- Konfigurasi `pubspec.yaml`, penggunaan registry `pub.dev`, dan manajemen package eksternal.
+
+### ⚡ Bab 15: Asynchronous Dart & Unit Testing
+- Pemrograman asinkron: Future (`async-await`) dan Stream (`async*` & `yield`).
+- Pengenalan testing otomatis, inisialisasi package `test`.
+- Penulisan skenario uji unit menggunakan fungsi `group()`, `test()`, dan `expect()`.
 
 ---
 
@@ -103,34 +121,25 @@ Portal ini terdiri dari **9 bab** yang disusun secara bertahap:
   <tr>
     <td align="center">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="50" height="50"><br>
-      <strong>HTML5</strong><br>Struktur
+      <strong>HTML5</strong><br>Struktur Halaman & Slide
     </td>
     <td align="center">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50"><br>
-      <strong>CSS3</strong><br>Styling
+      <strong>CSS3</strong><br>Styling & Animasi
     </td>
     <td align="center">
       <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="50" height="50"><br>
-      <strong>JavaScript</strong><br>Interaktivitas
+      <strong>JavaScript</strong><br>Navigasi & Rendering Slide
     </td>
   </tr>
 </table>
 
-### 🎨 Fitur Desain
-
-- **CSS Variables** - Sistem warna dan tema yang konsisten
-- **Glassmorphism** - Efek kaca buram modern
-- **CSS Grid & Flexbox** - Layout responsif
-- **CSS Animations** - Animasi halus dan dinamis
-- **Google Fonts (Poppins)** - Tipografi premium
-
-### ⚡ Fitur Interaktif
-
-- **3D Tilt Effect** - Kartu bereaksi terhadap gerakan mouse
-- **Parallax Background** - Efek kedalaman pada background
-- **Intersection Observer** - Animasi scroll yang halus
-- **Typing Effect** - Animasi ketik pada subtitle
-- **Dynamic Glow** - Efek cahaya mengikuti cursor
+### 🎨 Arsitektur Aset Bersama (Shared Assets)
+Untuk mengoptimalkan pemeliharaan kode dan kecepatan load halaman, portal ini menerapkan arsitektur modular:
+1. **`shared-style.css`**: Berada di root proyek, berisi seluruh styling portal, dark mode theme, typography, layout slide, dan efek hover glassmorphic.
+2. **`shared-script.js`**: Berada di root proyek, bertindak sebagai mesin presenter dinamis. Mendeteksi swipe, klik, input keyboard, dan merender slides dari berkas data lokal.
+3. **`index.html` (Bab)**: Halaman template di setiap folder bab yang sangat ringkas, hanya me-link file aset root dan slides lokal.
+4. **`slides-data.js` (Bab)**: Berkas data Javascript di masing-masing bab yang berisi konten tulisan dan contoh kode berformat HTML.
 
 ---
 
@@ -138,46 +147,30 @@ Portal ini terdiri dari **9 bab** yang disusun secara bertahap:
 
 ```
 Dart/
-├── 📄 index.html          # Halaman utama portal
-├── 🎨 styles.css          # Stylesheet utama
-├── 📜 script.js           # JavaScript interaktif
+├── 📄 index.html          # Halaman portal utama (Daftar Bab & Silabus)
+├── 🎨 shared-style.css    # Stylesheet global premium
+├── 📜 shared-script.js    # Logic presenter slide & navigasi generic
+├── 🎨 styles.css          # Stylesheet kustom portal utama
+├── 📜 script.js           # Script interaktif portal utama
 ├── 🖼️ Dart1.png           # Logo Dart
 ├── 📖 README.md           # Dokumentasi proyek
 │
-├── 📂 Bab 1 dart/         # Pengenalan & Sejarah
+├── 📂 Bab 1 dart/         # Setiap bab berisi index.html dan slides-data.js
+│   ├── index.html         # Ringkas, memuat template & link shared assets
+│   └── slides-data.js     # Berisi database materi lokal bab ini
+│   ...
+├── 📂 Bab 15 dart/
 │   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── 📂 Bab 2 dart/         # Variabel & Tipe Data
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── 📂 Bab 3 dart/         # Struktur Program
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── 📂 Bab 4 dart/         # Operator Dart
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
 │   └── slides-data.js
 │
-├── 📂 Bab 5 dart/         # Control Flow
-│   ├── index.html
-│   ├── style.css
-│   ├── script.js
-│   └── slides-data.js
-│
-├── 📂 Bab 6 dart/         # Functions Dasar
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── 📂 Bab 7 dart/         # Advanced Functions
-│   ├── index.html
+└── 📂 Silabus Semester Genap/
+    ├── index.html         # Silabus lengkap 32 pertemuan terintegrasi 15 bab
+    └── styles.css         # Styling modern silabus
+```
+
+---
+
+## 🚀 Cara Penggunaan�─ index.html
 │   ├── style.css
 │   └── script.js
 │
